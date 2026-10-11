@@ -1,0 +1,189 @@
+{
+  "schema_version": 1,
+  "robot": "新烧饼底盘2装电器设备",
+  "manifest": "manifest.json",
+  "default_visual_source": "urdf",
+  "ignored_meshes": [],
+  "scene_bindings": {
+    "armor": {
+      "link_regex": "^armor_link.*$",
+      "actor_name_template": "armor_{index}",
+      "material_slot": 0,
+      "material_asset": null
+    },
+    "camera": {
+      "link_regex": "^cam.*$",
+      "actor_name": "camera_sensor",
+      "ue_class": "/SpContent/Blueprints/BP_CameraSensor.BP_CameraSensor_C"
+    },
+    "imu": {
+      "parent": "camera",
+      "name": "imu_marker",
+      "relative_position_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "relative_rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  "links": {
+    "base_link": {
+      "visual_source": "urdf",
+      "ue_asset": null,
+      "local_transform": {
+        "xyz_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rpy_rad": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "runtime_bindings": []
+    },
+    "link_1": {
+      "visual_source": "urdf",
+      "ue_asset": null,
+      "local_transform": {
+        "xyz_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rpy_rad": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "runtime_bindings": []
+    },
+    "link_2": {
+      "visual_source": "urdf",
+      "ue_asset": null,
+      "local_transform": {
+        "xyz_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rpy_rad": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "runtime_bindings": []
+    },
+    "link_3": {
+      "visual_source": "urdf",
+      "ue_asset": null,
+      "local_transform": {
+        "xyz_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rpy_rad": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "runtime_bindings": []
+    },
+    "link_4": {
+      "visual_source": "urdf",
+      "ue_asset": null,
+      "local_transform": {
+        "xyz_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rpy_rad": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "runtime_bindings": []
+    },
+    "armor_link_1": {
+      "visual_source": "urdf",
+      "ue_asset": null,
+      "local_transform": {
+        "xyz_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rpy_rad": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "runtime_bindings": []
+    },
+    "armor_link_2": {
+      "visual_source": "urdf",
+      "ue_asset": null,
+      "local_transform": {
+        "xyz_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rpy_rad": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "runtime_bindings": []
+    },
+    "armor_link_3": {
+      "visual_source": "urdf",
+      "ue_asset": null,
+      "local_transform": {
+        "xyz_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rpy_rad": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "runtime_bindings": []
+    },
+    "armor_link_4": {
+      "visual_source": "urdf",
+      "ue_asset": null,
+      "local_transform": {
+        "xyz_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rpy_rad": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "runtime_bindings": []
+    }
+  }
+}

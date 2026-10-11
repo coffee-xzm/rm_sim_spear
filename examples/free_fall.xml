@@ -1,0 +1,9 @@
+<mujoco model="free_fall">
+  <option timestep="0.001" gravity="0 0 -9.81"/>
+  <worldbody>
+    <body name="ball" pos="0 0 1">
+      <freejoint/>
+      <geom type="sphere" size="0.01" mass="0.1"/>
+    </body>
+  </worldbody>
+</mujoco>

@@ -1,0 +1,3 @@
+[submodule "ue/Content"]
+	path = ue/Content
+	url = https://github.com/coffee-xzm/rm_sim_content.git

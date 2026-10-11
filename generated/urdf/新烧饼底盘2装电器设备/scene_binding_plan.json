@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "robot": "新烧饼底盘2装电器设备",
+  "manifest": "/home/coffee/rm_sim_spear/assets/新烧饼底盘2装电器设备_urdf/新烧饼底盘2装电器设备.urdf",
+  "armor": [
+    {
+      "link": "armor_link_1",
+      "actor_name": "armor_1",
+      "material_slot": 0,
+      "material_asset": null
+    },
+    {
+      "link": "armor_link_2",
+      "actor_name": "armor_2",
+      "material_slot": 0,
+      "material_asset": null
+    },
+    {
+      "link": "armor_link_3",
+      "actor_name": "armor_3",
+      "material_slot": 0,
+      "material_asset": null
+    },
+    {
+      "link": "armor_link_4",
+      "actor_name": "armor_4",
+      "material_slot": 0,
+      "material_asset": null
+    }
+  ],
+  "camera": null,
+  "imu": {
+    "parent": null,
+    "name": "imu_marker",
+    "relative_position_m": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "relative_rpy_rad": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "warnings": [
+    "no links matched camera.link_regex; camera and IMU cannot be attached"
+  ]
+}

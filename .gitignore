@@ -1,0 +1,8 @@
+# Python caches created while running the pipeline.
+__pycache__/
+*/__pycache__/
+*.py[cod]
+
+assets/
+.vscode/
+build/

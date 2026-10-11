@@ -1,0 +1,24 @@
+{
+    "FileVersion": 3,
+    "Version": 1,
+    "VersionName": "0.1.0",
+    "FriendlyName": "rm_sim_spear Metadata",
+    "Description": "Frame identity bridge for SPEAR camera readback.",
+    "Category": "SPEAR",
+    "CanContainContent": false,
+    "IsBetaVersion": true,
+    "Plugins": [
+        {
+            "Name": "SpCore",
+            "Enabled": true
+        }
+    ],
+    "Modules": [
+        {
+            "Name": "RmSimSpearMetadata",
+            "Type": "Runtime",
+            "LoadingPhase": "Default",
+            "AdditionalDependencies": ["SpCore"]
+        }
+    ]
+}

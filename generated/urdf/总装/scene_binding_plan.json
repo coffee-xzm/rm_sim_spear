@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "robot": "总装",
+  "manifest": "/home/coffee/rm_sim_spear/assets/总装_urdf/总装.urdf",
+  "armor": [
+    {
+      "link": "armor_link_1",
+      "actor_name": "armor_1",
+      "material_slot": 0,
+      "material_asset": null
+    },
+    {
+      "link": "armor_link_2",
+      "actor_name": "armor_2",
+      "material_slot": 0,
+      "material_asset": null
+    },
+    {
+      "link": "armor_link_3",
+      "actor_name": "armor_3",
+      "material_slot": 0,
+      "material_asset": null
+    },
+    {
+      "link": "armor_link_4",
+      "actor_name": "armor_4",
+      "material_slot": 0,
+      "material_asset": null
+    }
+  ],
+  "camera": {
+    "link": "cam_link_8",
+    "actor_name": "camera_sensor",
+    "ue_class": "/SpContent/Blueprints/BP_CameraSensor.BP_CameraSensor_C"
+  },
+  "imu": {
+    "parent": "cam_link_8",
+    "name": "imu_marker",
+    "relative_position_m": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "relative_rpy_rad": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "warnings": []
+}
