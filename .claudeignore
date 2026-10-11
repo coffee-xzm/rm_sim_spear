@@ -1,0 +1,48 @@
+# Agent ignore list. Independent from .gitignore -- do NOT keep the two in sync.
+#
+# Purpose: keep agents out of large binary, vendored, generated and cache trees
+# that are not meant for inspection or editing. Tooling may not enforce this
+# file, so treat it as a hard rule.
+
+# Python / pytest caches
+__pycache__
+.pytest_cache
+*.py[cod]
+rm_sim_spear.egg-info
+build
+
+# Unreal project build, editor and derived state. Reproducibility relies on
+# Config, Source and Content, never on these.
+ue/Binaries
+ue/Build
+ue/Intermediate
+ue/DerivedDataCache
+ue/Saved
+ue/**/Binaries
+ue/**/Intermediate
+ue/Plugins/**/Binaries
+ue/Plugins/**/Intermediate
+
+# Imported content is a git submodule holding binary assets. Read asset
+# metadata through the Unreal Editor Python API or tools/*.py, never by
+# opening files here. Writing here is only allowed through an editor
+# commandlet (tools/import_urdf_visuals.py).
+ue/Content
+
+# Binary asset formats
+*.uasset
+*.umap
+*.pak
+*.ubulk
+*.uexp
+
+# CAD/STL source meshes (~289 MB); the text side of assets/ stays readable
+assets/**/*.stl
+assets/**/*.STL
+assets/**/*.step
+assets/**/*.STEP
+assets/**/*.iges
+assets/**/*.IGES
+
+# Scratch output
+tmp

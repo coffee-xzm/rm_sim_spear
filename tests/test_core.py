@@ -380,6 +380,22 @@ class CoordinatorTests(unittest.TestCase):
         capture = port.submit(_snapshot(2))[0]
         self.assertEqual(capture.commit_id, 1)
 
+    def test_spear_reset_calls_pose_reset_hook(self):
+        instance = _FakeInstance()
+        component = _FakeCaptureComponent()
+        reset_calls = []
+        port = SpearRenderPort(
+            instance=instance,
+            capture_component=component,
+            apply_snapshot=lambda snapshot: None,
+            set_game_paused=lambda paused: None,
+            readback_metadata=_metadata_from_bundle,
+            bind_frame_metadata=lambda snapshot: None,
+            on_reset=lambda: reset_calls.append(True),
+        )
+        port.reset()
+        self.assertEqual(reset_calls, [True])
+
     def test_bridge_rejects_negative_unsigned_fields(self):
         commit = FrameCommit("run", 1, 1, -1, 0, 1)
         with self.assertRaises(ValueError):

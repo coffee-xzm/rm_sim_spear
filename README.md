@@ -73,6 +73,7 @@ python tools/sync_rune_content.py
 | [`docs/spear_metadata.md`](docs/spear_metadata.md) | SPEAR 图像回读来源绑定契约 |
 | [`docs/urdf_workflow.md`](docs/urdf_workflow.md) | `assets/` 中 URDF 到 MuJoCo/UE override 的清单与流程 |
 | [`docs/content_management.md`](docs/content_management.md) | UE 工程与 Content 的 Git LFS 管理方式 |
+| [`docs/ue_reproducibility.md`](docs/ue_reproducibility.md) | UE 5.8、SPEAR 固定版本、插件安装与渲染基线 |
 | [`rm_sim_spear/spear_scene_binding.py`](rm_sim_spear/spear_scene_binding.py) | SPEAR 运行时装甲、相机和 IMU 场景绑定 |
 | [`ue/README.md`](ue/README.md) | 可复制到 UE 工程的元数据 companion component |
 

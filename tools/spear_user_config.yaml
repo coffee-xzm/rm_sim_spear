@@ -1,0 +1,23 @@
+# Copy this file to /tmp/rm_sim_spear_user_config.yaml and adjust paths.
+# Use LAUNCH_MODE=none when UE is already running.
+
+SPEAR:
+  LAUNCH_MODE: "editor"
+  INSTANCE:
+    EDITOR_EXECUTABLE: "/home/coffee/Linux_Unreal_Engine_5.8.0/Engine/Binaries/Linux/UnrealEditor"
+    EDITOR_UPROJECT: "/home/coffee/rm_sim_spear/ue/rm_sim_spear.uproject"
+    EDITOR_LAUNCH_MODE: "editor"
+    COMMAND_LINE_ARGS:
+      resx: 512
+      resy: 512
+      windowed: null
+      # Belt and braces next to DefaultInput.ini's mouse changes: without these
+      # the engine switches the viewport to relative mouse mode
+      # (FLinuxApplication::SetHighPrecisionMouseMode) and grabs the pointer when
+      # the window activates, so the desktop mouse stops working.  The engine
+      # applies both of these after the ini, so they are the strongest guarantee.
+      # UE_NORELATIVEMOUSEMODE=1 has the same effect as -norelativemousemode.
+      # Keep NoCapture: the human debug loop click-selects actors in PIE.
+      # Regression guard: tests/test_mouse_capture_config.py.
+      norelativemousemode: null
+      DefaultViewportMouseCaptureMode: "NoCapture"

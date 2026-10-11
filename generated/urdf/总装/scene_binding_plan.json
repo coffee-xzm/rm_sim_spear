@@ -2,36 +2,217 @@
   "schema_version": 1,
   "robot": "总装",
   "manifest": "/home/coffee/rm_sim_spear/assets/总装_urdf/总装.urdf",
-  "armor": [
+  "robot_visual": {
+    "link": "base_link",
+    "actor_name": null,
+    "actor_path": null,
+    "reset_relative_transform": false,
+    "mode": "link_hierarchy",
+    "link_actor_tag": "MuJoCoBody={link}"
+  },
+  "links": [
     {
-      "link": "armor_link_1",
-      "actor_name": "armor_1",
-      "material_slot": 0,
-      "material_asset": null
+      "name": "base_link",
+      "parent": null,
+      "joint": null,
+      "origin_ue_cm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ]
     },
     {
-      "link": "armor_link_2",
-      "actor_name": "armor_2",
-      "material_slot": 0,
-      "material_asset": null
+      "name": "link_2",
+      "parent": "base_link",
+      "joint": "link_2_joint",
+      "origin_ue_cm": [
+        -2.9266053318516727,
+        46.85916864871057,
+        -1.3650010615161412
+      ],
+      "origin_rpy_rad": [
+        1.5707963267948883,
+        1.178097245096183,
+        -0.7682939367279129
+      ]
     },
     {
-      "link": "armor_link_3",
-      "actor_name": "armor_3",
-      "material_slot": 0,
-      "material_asset": null
+      "name": "link_1",
+      "parent": "base_link",
+      "joint": "link_1_joint",
+      "origin_ue_cm": [
+        -2.9413616587290523,
+        9.755337482372033,
+        -1.3650010615162287
+      ],
+      "origin_rpy_rad": [
+        -1.5707963267948983,
+        -0.3926990816987262,
+        0.7853981633974583
+      ]
     },
     {
-      "link": "armor_link_4",
-      "actor_name": "armor_4",
-      "material_slot": 0,
-      "material_asset": null
+      "name": "link_3",
+      "parent": "base_link",
+      "joint": "link_3_joint",
+      "origin_ue_cm": [
+        33.54796154461703,
+        46.84466438407202,
+        -1.3650010615161363
+      ],
+      "origin_rpy_rad": [
+        1.5707963267948977,
+        0.3926990816987263,
+        0.7853981633974505
+      ]
+    },
+    {
+      "name": "link_4",
+      "parent": "base_link",
+      "joint": "link_4_joint",
+      "origin_ue_cm": [
+        33.53320515214682,
+        9.740829551569739,
+        -1.3650010615162238
+      ],
+      "origin_rpy_rad": [
+        1.5707963267949003,
+        -1.178097245096168,
+        2.3732987168618913
+      ]
+    },
+    {
+      "name": "link_5",
+      "parent": "base_link",
+      "joint": "link_5_joint",
+      "origin_ue_cm": [
+        8.653300858899263,
+        28.300000000000075,
+        2.0000000000000173
+      ],
+      "origin_rpy_rad": [
+        1.5707963267948966,
+        0.8839753821931647,
+        1.570796326794899
+      ]
+    },
+    {
+      "name": "link_6",
+      "parent": "link_5",
+      "joint": "link_6_joint",
+      "origin_ue_cm": [
+        3.6068360644262776,
+        -3.8148700638887423,
+        6.650000000000006
+      ],
+      "origin_rpy_rad": [
+        0.0,
+        1.5707963267948966,
+        0.8134213075214891
+      ]
+    },
+    {
+      "name": "link_7",
+      "parent": "link_6",
+      "joint": "link_7_joint",
+      "origin_ue_cm": [
+        7.500000000000022,
+        -3.469446951953614e-15,
+        14.249999999999972
+      ],
+      "origin_rpy_rad": [
+        1.570796326794898,
+        -0.031013155502280527,
+        -1.5707963267949039
+      ]
+    },
+    {
+      "name": "cam_link_8",
+      "parent": "link_7",
+      "joint": "link_8_joint",
+      "origin_ue_cm": [
+        -0.4699999999999843,
+        15.149999999999991,
+        3.000000000000078
+      ],
+      "origin_rpy_rad": [
+        1.5707963267948992,
+        3.8605224084446103e-16,
+        -3.141581742311308
+      ]
+    },
+    {
+      "name": "armor_link_1",
+      "parent": "base_link",
+      "joint": "link_9_joint",
+      "origin_ue_cm": [
+        15.303300941964837,
+        56.48481297964649,
+        6.84604896153124
+      ],
+      "origin_rpy_rad": [
+        -1.2868564914392223e-13,
+        1.3089969389948228,
+        -1.5707963267954488
+      ]
+    },
+    {
+      "name": "armor_link_2",
+      "parent": "base_link",
+      "joint": "link_10_joint",
+      "origin_ue_cm": [
+        -14.181512120747442,
+        28.300000083065317,
+        2.5460489615311714
+      ],
+      "origin_rpy_rad": [
+        -1.2714859176381979e-13,
+        1.3089969389948224,
+        3.1415926535892438
+      ]
+    },
+    {
+      "name": "armor_link_3",
+      "parent": "base_link",
+      "joint": "link_11_joint",
+      "origin_ue_cm": [
+        15.303300775833945,
+        1.0899318917447096,
+        4.5460489615311825
+      ],
+      "origin_rpy_rad": [
+        -1.273959203286778e-13,
+        1.3089969389948228,
+        1.5707963267943466
+      ]
+    },
+    {
+      "name": "armor_link_4",
+      "parent": "base_link",
+      "joint": "link_12_joint",
+      "origin_ue_cm": [
+        41.988113838545566,
+        28.299999916934688,
+        6.846048961531129
+      ],
+      "origin_rpy_rad": [
+        -1.2822499126392347e-13,
+        1.3089969389948242,
+        -5.501031554287922e-13
+      ]
     }
   ],
+  "armor": [],
   "camera": {
     "link": "cam_link_8",
     "actor_name": "camera_sensor",
-    "ue_class": "/SpContent/Blueprints/BP_CameraSensor.BP_CameraSensor_C"
+    "ue_class": "/SpContent/Blueprints/BP_CameraSensor.BP_CameraSensor_C",
+    "mode": "spear_sensor"
   },
   "imu": {
     "parent": "cam_link_8",

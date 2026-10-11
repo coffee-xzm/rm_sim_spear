@@ -14,9 +14,26 @@ URmSimSpearReadbackMetadataComponent::URmSimSpearReadbackMetadataComponent()
     SP_ASSERT(SpFuncComponent);
 }
 
-void URmSimSpearReadbackMetadataComponent::BeginPlay()
+void URmSimSpearReadbackMetadataComponent::Initialize()
 {
-    Super::BeginPlay();
+    if (bInitialized) {
+        return;
+    }
+
+    // USpFuncService::getSpFuncComponent() resolves our SpFuncs by walking this
+    // component's AttachChildren, and UnrealUtils::createSceneComponentInsideOwnerConstructor
+    // only records AttachParent -- SetupAttachment() explicitly defers the real
+    // wiring to AttachToComponent(). When we are constructed as a class default
+    // object (i.e. placed on a Blueprint) the child gets attached as part of
+    // actor registration. When SPEAR creates us at runtime with
+    // unreal_service.create_scene_component_for_actor() nothing ever does, so
+    // our SpFuncComponent stays out of AttachChildren and SPEAR reports this
+    // component as having no SpFuncs at all. Attach explicitly here; for the
+    // Blueprint case AttachToComponent() finds us already attached and returns
+    // immediately.
+    if (SpFuncComponent) {
+        SpFuncComponent->AttachToComponent(this, FAttachmentTransformRules::KeepRelativeTransform);
+    }
 
     SpFuncComponent->registerFunc("bind_frame_metadata", [this](SpFuncDataBundle& args) -> SpFuncDataBundle {
         queued_metadata_.push_back({addFrameId(args.info_)});
@@ -47,15 +64,44 @@ void URmSimSpearReadbackMetadataComponent::BeginPlay()
         queued_metadata_.clear();
         return SpFuncDataBundle();
     });
+
+    bInitialized = true;
+
+    UE_LOG(LogTemp, Display, TEXT("URmSimSpearReadbackMetadataComponent::Initialize(): registered 4 SpFuncs, %d attach child(ren)"),
+        GetAttachChildren().Num());
 }
 
-void URmSimSpearReadbackMetadataComponent::EndPlay(const EEndPlayReason::Type EndPlayReason)
+void URmSimSpearReadbackMetadataComponent::Terminate()
 {
+    if (!bInitialized) {
+        return;
+    }
+
     SpFuncComponent->unregisterFunc("bind_frame_metadata");
     SpFuncComponent->unregisterFunc("enqueue_copy_metadata");
     SpFuncComponent->unregisterFunc("readback_metadata");
     SpFuncComponent->unregisterFunc("reset_metadata");
     queued_metadata_.clear();
+    bInitialized = false;
+}
+
+bool URmSimSpearReadbackMetadataComponent::IsInitialized()
+{
+    return bInitialized;
+}
+
+void URmSimSpearReadbackMetadataComponent::BeginPlay()
+{
+    Super::BeginPlay();
+
+    // Keeps the component usable without Python driving Initialize(); calling
+    // it twice is harmless because Initialize() is guarded.
+    Initialize();
+}
+
+void URmSimSpearReadbackMetadataComponent::EndPlay(const EEndPlayReason::Type EndPlayReason)
+{
+    Terminate();
     Super::EndPlay(EndPlayReason);
 }
 

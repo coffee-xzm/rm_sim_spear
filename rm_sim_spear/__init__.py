@@ -18,13 +18,18 @@ __all__ = [
     "MemoryRenderer",
     "Observation",
     "Pose",
+    "PoseSynchronizer",
     "ReadbackMetadata",
     "ProjectileSubsystem",
     "Snapshot",
     "SpearRenderPort",
     "SpearMetadataCallbacks",
+    "get_scene_camera_capture_component",
+    "make_scene_pose_synchronizer",
     "TargetGeometry",
+    "UnrealPose",
     "calculate_ring",
+    "to_unreal_pose",
 ]
 
 
@@ -32,6 +37,13 @@ def __getattr__(name):
     if name in {"Capture", "FrameCommit", "Observation", "Pose", "ReadbackMetadata", "Snapshot"}:
         from . import model
         return getattr(model, name)
+    if name in {"PoseSynchronizer", "UnrealPose", "to_unreal_pose"}:
+        from .pose_sync import PoseSynchronizer, UnrealPose, to_unreal_pose
+        return {
+            "PoseSynchronizer": PoseSynchronizer,
+            "UnrealPose": UnrealPose,
+            "to_unreal_pose": to_unreal_pose,
+        }[name]
     if name in {"Coordinator", "FrameResult"}:
         from .coordinator import Coordinator, FrameResult
         return {"Coordinator": Coordinator, "FrameResult": FrameResult}[name]
@@ -47,4 +59,10 @@ def __getattr__(name):
     if name == "SpearMetadataCallbacks":
         from .spear_metadata import SpearMetadataCallbacks
         return SpearMetadataCallbacks
+    if name in {"get_scene_camera_capture_component", "make_scene_pose_synchronizer"}:
+        from .spear_scene_binding import get_scene_camera_capture_component, make_scene_pose_synchronizer
+        return {
+            "get_scene_camera_capture_component": get_scene_camera_capture_component,
+            "make_scene_pose_synchronizer": make_scene_pose_synchronizer,
+        }[name]
     raise AttributeError(name)

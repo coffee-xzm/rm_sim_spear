@@ -3,14 +3,14 @@
   
   
   <mujoco>
-    <compiler strippath="false" discardvisual="false" boundmass="1e-6" boundinertia="1e-12" balanceinertia="true" />
+    <compiler strippath="false" discardvisual="false" boundmass="1e-6" boundinertia="1e-12" balanceinertia="true" fusestatic="false" />
   </mujoco>
   <link name="base_link">
     
     <inertial>
-      <origin xyz="0.14977155653491533 -0.28679973632311967 0.057734326574988636" rpy="0 0 0" />
+      <origin xyz="0.14977155653491536 -0.28679973632311967 0.057734326574988636" rpy="0 0 0" />
       <mass value="0.20550856776340928" />
-      <inertia ixx="0.0061767419001835131" ixy="4.6665874718633932E-05" ixz="-0.0005218726734371931" iyy="0.0064742562207318003" iyz="0.00027395175666712732" izz="0.012068266126320263" />
+      <inertia ixx="0.0061767419001835131" ixy="4.6665874718634095E-05" ixz="-0.00052187267343719299" iyy="0.0064742562207318003" iyz="0.00027395175666712732" izz="0.012068266126320263" />
     </inertial>
     
     <visual>
@@ -770,13 +770,13 @@
     <visual>
       <origin xyz="0.31996157856613072 -0.34208615700971257 0.06700402844805721" rpy="-1.5707963267948966 1.8211125385249958E-15 -3.1415926535897905" />
       <geometry>
-        <mesh filename="/home/coffee/rm_sim_spear/assets/总装_urdf/meshes/CONN_TH_XT30UPB_F_CONN_TH_XT30UPB_F_2U0e_step_默认_05c5c86370327252.stl" />
+        <mesh filename="/home/coffee/rm_sim_spear/assets/总装_urdf/meshes/CONN_TH_XT30UPB_F_CONN_TH_XT30UPB_F_2U0e_step_默认_e79a7d8bacbf2831.stl" />
       </geometry>
     </visual>
     <collision>
       <origin xyz="0.31996157856613072 -0.34208615700971257 0.06700402844805721" rpy="-1.5707963267948966 1.8211125385249958E-15 -3.1415926535897905" />
       <geometry>
-        <mesh filename="/home/coffee/rm_sim_spear/assets/总装_urdf/meshes/CONN_TH_XT30UPB_F_CONN_TH_XT30UPB_F_2U0e_step_默认_05c5c86370327252.stl" />
+        <mesh filename="/home/coffee/rm_sim_spear/assets/总装_urdf/meshes/CONN_TH_XT30UPB_F_CONN_TH_XT30UPB_F_2U0e_step_默认_e79a7d8bacbf2831.stl" />
       </geometry>
     </collision>
     
@@ -1288,6 +1288,19 @@
     </collision>
     
     <visual>
+      <origin xyz="0.33523300858899863 -0.28299999999999836 0.021698022253712892" rpy="3.1415023304296685 8.0043873296534897E-09 -1.5707963267948939" />
+      <geometry>
+        <mesh filename="/home/coffee/rm_sim_spear/assets/总装_urdf/meshes/新电池_默认_ad15cf6fb7fa599c.stl" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0.33523300858899863 -0.28299999999999836 0.021698022253712892" rpy="3.1415023304296685 8.0043873296534897E-09 -1.5707963267948939" />
+      <geometry>
+        <mesh filename="/home/coffee/rm_sim_spear/assets/总装_urdf/meshes/新电池_默认_ad15cf6fb7fa599c.stl" />
+      </geometry>
+    </collision>
+    
+    <visual>
       <origin xyz="0.36603300858899063 -0.30279999999999951 0.066500000000000087" rpy="-3.1415926535897931 -1.3421559677123708E-16 -1.5707963267948946" />
       <geometry>
         <mesh filename="/home/coffee/rm_sim_spear/assets/总装_urdf/meshes/TPU下壳_默认_494d27ab4c5022e5.stl" />
@@ -1355,52 +1368,52 @@
     <visual>
       <origin xyz="0.29191065146427675 -0.34208615700971262 0.058622011684023159" rpy="-1.5707963267948966 1.8211125385249958E-15 -3.1415926535897905" />
       <geometry>
-        <mesh filename="/home/coffee/rm_sim_spear/assets/总装_urdf/meshes/CONN_TH_XT30UPB_F_CONN_TH_XT30UPB_F_2U0e_step_默认_05c5c86370327252.stl" />
+        <mesh filename="/home/coffee/rm_sim_spear/assets/总装_urdf/meshes/CONN_TH_XT30UPB_F_CONN_TH_XT30UPB_F_2U0e_step_默认_e79a7d8bacbf2831.stl" />
       </geometry>
     </visual>
     <collision>
       <origin xyz="0.29191065146427675 -0.34208615700971262 0.058622011684023159" rpy="-1.5707963267948966 1.8211125385249958E-15 -3.1415926535897905" />
       <geometry>
-        <mesh filename="/home/coffee/rm_sim_spear/assets/总装_urdf/meshes/CONN_TH_XT30UPB_F_CONN_TH_XT30UPB_F_2U0e_step_默认_05c5c86370327252.stl" />
+        <mesh filename="/home/coffee/rm_sim_spear/assets/总装_urdf/meshes/CONN_TH_XT30UPB_F_CONN_TH_XT30UPB_F_2U0e_step_默认_e79a7d8bacbf2831.stl" />
       </geometry>
     </collision>
     
     <visual>
       <origin xyz="0.30596767457832275 -0.34208615700971257 0.067004028448057196" rpy="-1.5707963267948966 1.8211125385249958E-15 -3.1415926535897905" />
       <geometry>
-        <mesh filename="/home/coffee/rm_sim_spear/assets/总装_urdf/meshes/CONN_TH_XT30UPB_F_CONN_TH_XT30UPB_F_2U0e_step_默认_05c5c86370327252.stl" />
+        <mesh filename="/home/coffee/rm_sim_spear/assets/总装_urdf/meshes/CONN_TH_XT30UPB_F_CONN_TH_XT30UPB_F_2U0e_step_默认_e79a7d8bacbf2831.stl" />
       </geometry>
     </visual>
     <collision>
       <origin xyz="0.30596767457832275 -0.34208615700971257 0.067004028448057196" rpy="-1.5707963267948966 1.8211125385249958E-15 -3.1415926535897905" />
       <geometry>
-        <mesh filename="/home/coffee/rm_sim_spear/assets/总装_urdf/meshes/CONN_TH_XT30UPB_F_CONN_TH_XT30UPB_F_2U0e_step_默认_05c5c86370327252.stl" />
+        <mesh filename="/home/coffee/rm_sim_spear/assets/总装_urdf/meshes/CONN_TH_XT30UPB_F_CONN_TH_XT30UPB_F_2U0e_step_默认_e79a7d8bacbf2831.stl" />
       </geometry>
     </collision>
     
     <visual>
       <origin xyz="0.29187064638426674 -0.34208615700971262 0.067004028448057168" rpy="-1.5707963267948966 1.8211125385249958E-15 -3.1415926535897905" />
       <geometry>
-        <mesh filename="/home/coffee/rm_sim_spear/assets/总装_urdf/meshes/CONN_TH_XT30UPB_F_CONN_TH_XT30UPB_F_2U0e_step_默认_05c5c86370327252.stl" />
+        <mesh filename="/home/coffee/rm_sim_spear/assets/总装_urdf/meshes/CONN_TH_XT30UPB_F_CONN_TH_XT30UPB_F_2U0e_step_默认_e79a7d8bacbf2831.stl" />
       </geometry>
     </visual>
     <collision>
       <origin xyz="0.29187064638426674 -0.34208615700971262 0.067004028448057168" rpy="-1.5707963267948966 1.8211125385249958E-15 -3.1415926535897905" />
       <geometry>
-        <mesh filename="/home/coffee/rm_sim_spear/assets/总装_urdf/meshes/CONN_TH_XT30UPB_F_CONN_TH_XT30UPB_F_2U0e_step_默认_05c5c86370327252.stl" />
+        <mesh filename="/home/coffee/rm_sim_spear/assets/总装_urdf/meshes/CONN_TH_XT30UPB_F_CONN_TH_XT30UPB_F_2U0e_step_默认_e79a7d8bacbf2831.stl" />
       </geometry>
     </collision>
     
     <visual>
       <origin xyz="0.32717608199513781 -0.34049999999999953 0.034999964439929226" rpy="0 -1.5707963267948966 1.5707963267948992" />
       <geometry>
-        <mesh filename="/home/coffee/rm_sim_spear/assets/总装_urdf/meshes/Board_31iW_step_默认_ce189fdf03dd9acd.stl" />
+        <mesh filename="/home/coffee/rm_sim_spear/assets/总装_urdf/meshes/Board_31iW_step_默认_86ca4e34ff15f883.stl" />
       </geometry>
     </visual>
     <collision>
       <origin xyz="0.32717608199513781 -0.34049999999999953 0.034999964439929226" rpy="0 -1.5707963267948966 1.5707963267948992" />
       <geometry>
-        <mesh filename="/home/coffee/rm_sim_spear/assets/总装_urdf/meshes/Board_31iW_step_默认_ce189fdf03dd9acd.stl" />
+        <mesh filename="/home/coffee/rm_sim_spear/assets/总装_urdf/meshes/Board_31iW_step_默认_86ca4e34ff15f883.stl" />
       </geometry>
     </collision>
     
@@ -3552,13 +3565,13 @@
     <visual>
       <origin xyz="0.30597891156079682 -0.34208615694363159 0.039774951870765192" rpy="1.5707963267948966 -1.8211125385249958E-15 2.6213840126354526E-15" />
       <geometry>
-        <mesh filename="/home/coffee/rm_sim_spear/assets/总装_urdf/meshes/CONN_TH_XT30PW_M_CONN_TH_XT30PW_M_cAaz_step_默认_e047b1256fecfaf2.stl" />
+        <mesh filename="/home/coffee/rm_sim_spear/assets/总装_urdf/meshes/CONN_TH_XT30PW_M_CONN_TH_XT30PW_M_cAaz_step_默认_0fec3f1561504935.stl" />
       </geometry>
     </visual>
     <collision>
       <origin xyz="0.30597891156079682 -0.34208615694363159 0.039774951870765192" rpy="1.5707963267948966 -1.8211125385249958E-15 2.6213840126354526E-15" />
       <geometry>
-        <mesh filename="/home/coffee/rm_sim_spear/assets/总装_urdf/meshes/CONN_TH_XT30PW_M_CONN_TH_XT30PW_M_cAaz_step_默认_e047b1256fecfaf2.stl" />
+        <mesh filename="/home/coffee/rm_sim_spear/assets/总装_urdf/meshes/CONN_TH_XT30PW_M_CONN_TH_XT30PW_M_cAaz_step_默认_0fec3f1561504935.stl" />
       </geometry>
     </collision>
     
@@ -3942,13 +3955,13 @@
     <visual>
       <origin xyz="0.30597967356232075 -0.34208615700971257 0.058622011684023187" rpy="-1.5707963267948966 1.8211125385249958E-15 -3.1415926535897905" />
       <geometry>
-        <mesh filename="/home/coffee/rm_sim_spear/assets/总装_urdf/meshes/CONN_TH_XT30UPB_F_CONN_TH_XT30UPB_F_2U0e_step_默认_05c5c86370327252.stl" />
+        <mesh filename="/home/coffee/rm_sim_spear/assets/总装_urdf/meshes/CONN_TH_XT30UPB_F_CONN_TH_XT30UPB_F_2U0e_step_默认_e79a7d8bacbf2831.stl" />
       </geometry>
     </visual>
     <collision>
       <origin xyz="0.30597967356232075 -0.34208615700971257 0.058622011684023187" rpy="-1.5707963267948966 1.8211125385249958E-15 -3.1415926535897905" />
       <geometry>
-        <mesh filename="/home/coffee/rm_sim_spear/assets/总装_urdf/meshes/CONN_TH_XT30UPB_F_CONN_TH_XT30UPB_F_2U0e_step_默认_05c5c86370327252.stl" />
+        <mesh filename="/home/coffee/rm_sim_spear/assets/总装_urdf/meshes/CONN_TH_XT30UPB_F_CONN_TH_XT30UPB_F_2U0e_step_默认_e79a7d8bacbf2831.stl" />
       </geometry>
     </collision>
     
@@ -3981,13 +3994,13 @@
     <visual>
       <origin xyz="0.31993770251837872 -0.34208615700971257 0.058622011684023215" rpy="-1.5707963267948966 1.8211125385249958E-15 -3.1415926535897905" />
       <geometry>
-        <mesh filename="/home/coffee/rm_sim_spear/assets/总装_urdf/meshes/CONN_TH_XT30UPB_F_CONN_TH_XT30UPB_F_2U0e_step_默认_05c5c86370327252.stl" />
+        <mesh filename="/home/coffee/rm_sim_spear/assets/总装_urdf/meshes/CONN_TH_XT30UPB_F_CONN_TH_XT30UPB_F_2U0e_step_默认_e79a7d8bacbf2831.stl" />
       </geometry>
     </visual>
     <collision>
       <origin xyz="0.31993770251837872 -0.34208615700971257 0.058622011684023215" rpy="-1.5707963267948966 1.8211125385249958E-15 -3.1415926535897905" />
       <geometry>
-        <mesh filename="/home/coffee/rm_sim_spear/assets/总装_urdf/meshes/CONN_TH_XT30UPB_F_CONN_TH_XT30UPB_F_2U0e_step_默认_05c5c86370327252.stl" />
+        <mesh filename="/home/coffee/rm_sim_spear/assets/总装_urdf/meshes/CONN_TH_XT30UPB_F_CONN_TH_XT30UPB_F_2U0e_step_默认_e79a7d8bacbf2831.stl" />
       </geometry>
     </collision>
     
@@ -4124,13 +4137,13 @@
     <visual>
       <origin xyz="0.31993694051685478 -0.34208615694363159 0.03977495187076522" rpy="1.5707963267948966 -1.8211125385249958E-15 2.6213840126354526E-15" />
       <geometry>
-        <mesh filename="/home/coffee/rm_sim_spear/assets/总装_urdf/meshes/CONN_TH_XT30PW_M_CONN_TH_XT30PW_M_cAaz_step_默认_e047b1256fecfaf2.stl" />
+        <mesh filename="/home/coffee/rm_sim_spear/assets/总装_urdf/meshes/CONN_TH_XT30PW_M_CONN_TH_XT30PW_M_cAaz_step_默认_0fec3f1561504935.stl" />
       </geometry>
     </visual>
     <collision>
       <origin xyz="0.31993694051685478 -0.34208615694363159 0.03977495187076522" rpy="1.5707963267948966 -1.8211125385249958E-15 2.6213840126354526E-15" />
       <geometry>
-        <mesh filename="/home/coffee/rm_sim_spear/assets/总装_urdf/meshes/CONN_TH_XT30PW_M_CONN_TH_XT30PW_M_cAaz_step_默认_e047b1256fecfaf2.stl" />
+        <mesh filename="/home/coffee/rm_sim_spear/assets/总装_urdf/meshes/CONN_TH_XT30PW_M_CONN_TH_XT30PW_M_cAaz_step_默认_0fec3f1561504935.stl" />
       </geometry>
     </collision>
     
@@ -4319,13 +4332,13 @@
     <visual>
       <origin xyz="0.29199688463674278 -0.34208615694363165 0.039774951870765164" rpy="1.5707963267948966 -1.8211125385249958E-15 2.6213840126354526E-15" />
       <geometry>
-        <mesh filename="/home/coffee/rm_sim_spear/assets/总装_urdf/meshes/CONN_TH_XT30PW_M_CONN_TH_XT30PW_M_cAaz_step_默认_e047b1256fecfaf2.stl" />
+        <mesh filename="/home/coffee/rm_sim_spear/assets/总装_urdf/meshes/CONN_TH_XT30PW_M_CONN_TH_XT30PW_M_cAaz_step_默认_0fec3f1561504935.stl" />
       </geometry>
     </visual>
     <collision>
       <origin xyz="0.29199688463674278 -0.34208615694363165 0.039774951870765164" rpy="1.5707963267948966 -1.8211125385249958E-15 2.6213840126354526E-15" />
       <geometry>
-        <mesh filename="/home/coffee/rm_sim_spear/assets/总装_urdf/meshes/CONN_TH_XT30PW_M_CONN_TH_XT30PW_M_cAaz_step_默认_e047b1256fecfaf2.stl" />
+        <mesh filename="/home/coffee/rm_sim_spear/assets/总装_urdf/meshes/CONN_TH_XT30PW_M_CONN_TH_XT30PW_M_cAaz_step_默认_0fec3f1561504935.stl" />
       </geometry>
     </collision>
     
@@ -4436,9 +4449,9 @@
   <link name="link_2">
     
     <inertial>
-      <origin xyz="0.00027626850908753247 -7.4206200019805786E-05 -0.021448818118689105" rpy="0 0 0" />
+      <origin xyz="0.00027626850908753263 -7.4206200019805841E-05 -0.021448818118689109" rpy="0 0 0" />
       <mass value="0.33600000000000002" />
-      <inertia ixx="0.00012769361811655798" ixy="7.0269289738540108E-07" ixz="-6.3091086204602299E-07" iyy="0.00012901225779198735" iyz="1.8171780794243046E-07" izz="0.00015251062090722154" />
+      <inertia ixx="0.00012769361811655798" ixy="7.0269289738540108E-07" ixz="-6.3091086204602235E-07" iyy="0.00012901225779198735" iyz="1.8171780794242998E-07" izz="0.00015251062090722154" />
     </inertial>
     
     <visual>
@@ -6095,22 +6108,22 @@
     <visual>
       <origin xyz="1.6653345369377348E-16 -4.4131365228849972E-15 -0.017156976026982851" rpy="-5.2180482157382365E-15 2.55351295663786E-15 -2.7007445969120081" />
       <geometry>
-        <mesh filename="/home/coffee/rm_sim_spear/assets/总装_urdf/meshes/M3508___________268__17_STEP_默认_fa9f1ab2c32e97e8.stl" />
+        <mesh filename="/home/coffee/rm_sim_spear/assets/总装_urdf/meshes/M3508___________268__17_STEP_默认_196a7cd650a83b1e.stl" />
       </geometry>
     </visual>
     <collision>
       <origin xyz="1.6653345369377348E-16 -4.4131365228849972E-15 -0.017156976026982851" rpy="-5.2180482157382365E-15 2.55351295663786E-15 -2.7007445969120081" />
       <geometry>
-        <mesh filename="/home/coffee/rm_sim_spear/assets/总装_urdf/meshes/M3508___________268__17_STEP_默认_fa9f1ab2c32e97e8.stl" />
+        <mesh filename="/home/coffee/rm_sim_spear/assets/总装_urdf/meshes/M3508___________268__17_STEP_默认_196a7cd650a83b1e.stl" />
       </geometry>
     </collision>
   </link>
   <link name="link_1">
     
     <inertial>
-      <origin xyz="-0.00014287962896406873 0.00024782304344425795 -0.021448818118689077" rpy="0 0 0" />
+      <origin xyz="-0.00014287962896406881 0.00024782304344425811 -0.021448818118689077" rpy="0 0 0" />
       <mass value="0.33600000000000002" />
-      <inertia ixx="0.00012905563085165801" ixy="6.5931983771467774E-07" ixz="3.1762745461861992E-07" iyy="0.00012765024505688718" iyz="-5.7461524313555205E-07" izz="0.00015251062090722154" />
+      <inertia ixx="0.00012905563085165801" ixy="6.5931983771467774E-07" ixz="3.1762745461861976E-07" iyy="0.00012765024505688718" iyz="-5.7461524313555121E-07" izz="0.00015251062090722154" />
     </inertial>
     
     <visual>
@@ -7767,22 +7780,22 @@
     <visual>
       <origin xyz="2.9420910152566648E-15 3.2959746043559335E-15 -0.017156976026982823" rpy="-1.9984014443252822E-15 5.6066262743570405E-15 -0.3445501067196714" />
       <geometry>
-        <mesh filename="/home/coffee/rm_sim_spear/assets/总装_urdf/meshes/M3508___________268__17_STEP_默认_fa9f1ab2c32e97e8.stl" />
+        <mesh filename="/home/coffee/rm_sim_spear/assets/总装_urdf/meshes/M3508___________268__17_STEP_默认_196a7cd650a83b1e.stl" />
       </geometry>
     </visual>
     <collision>
       <origin xyz="2.9420910152566648E-15 3.2959746043559335E-15 -0.017156976026982823" rpy="-1.9984014443252822E-15 5.6066262743570405E-15 -0.3445501067196714" />
       <geometry>
-        <mesh filename="/home/coffee/rm_sim_spear/assets/总装_urdf/meshes/M3508___________268__17_STEP_默认_fa9f1ab2c32e97e8.stl" />
+        <mesh filename="/home/coffee/rm_sim_spear/assets/总装_urdf/meshes/M3508___________268__17_STEP_默认_196a7cd650a83b1e.stl" />
       </geometry>
     </collision>
   </link>
   <link name="link_3">
     
     <inertial>
-      <origin xyz="0.00014287962896398308 -0.00024782304344429242 -0.021448818118689105" rpy="0 0 0" />
+      <origin xyz="0.00014287962896398314 -0.00024782304344429259 -0.021448818118689105" rpy="0 0 0" />
       <mass value="0.33600000000000002" />
-      <inertia ixx="0.00012905563085165801" ixy="6.5931983771469807E-07" ixz="-3.1762745461859885E-07" iyy="0.00012765024505688723" iyz="5.7461524313553575E-07" izz="0.00015251062090722154" />
+      <inertia ixx="0.00012905563085165801" ixy="6.5931983771469807E-07" ixz="-3.1762745461859874E-07" iyy="0.00012765024505688723" iyz="5.746152431355349E-07" izz="0.00015251062090722154" />
     </inertial>
     
     <visual>
@@ -9439,22 +9452,22 @@
     <visual>
       <origin xyz="-3.0253577421035516E-15 -3.3306690738754696E-15 -0.017156976026982851" rpy="-1.7763568394002509E-15 5.1625370645069779E-15 2.7970425468701219" />
       <geometry>
-        <mesh filename="/home/coffee/rm_sim_spear/assets/总装_urdf/meshes/M3508___________268__17_STEP_默认_fa9f1ab2c32e97e8.stl" />
+        <mesh filename="/home/coffee/rm_sim_spear/assets/总装_urdf/meshes/M3508___________268__17_STEP_默认_196a7cd650a83b1e.stl" />
       </geometry>
     </visual>
     <collision>
       <origin xyz="-3.0253577421035516E-15 -3.3306690738754696E-15 -0.017156976026982851" rpy="-1.7763568394002509E-15 5.1625370645069779E-15 2.7970425468701219" />
       <geometry>
-        <mesh filename="/home/coffee/rm_sim_spear/assets/总装_urdf/meshes/M3508___________268__17_STEP_默认_fa9f1ab2c32e97e8.stl" />
+        <mesh filename="/home/coffee/rm_sim_spear/assets/总装_urdf/meshes/M3508___________268__17_STEP_默认_196a7cd650a83b1e.stl" />
       </geometry>
     </collision>
   </link>
   <link name="link_4">
     
     <inertial>
-      <origin xyz="-0.00024782304344423632 -0.00014287962896406773 -0.021448818118689105" rpy="0 0 0" />
+      <origin xyz="-0.00024782304344423648 -0.00014287962896406781 -0.021448818118689105" rpy="0 0 0" />
       <mass value="0.33600000000000002" />
-      <inertia ixx="0.0001276502450568872" ixy="-6.5931983771466102E-07" ixz="5.7461524313553945E-07" iyy="0.00012905563085165801" iyz="3.1762745461859827E-07" izz="0.00015251062090722154" />
+      <inertia ixx="0.0001276502450568872" ixy="-6.5931983771466102E-07" ixz="5.7461524313553861E-07" iyy="0.00012905563085165801" iyz="3.1762745461859811E-07" izz="0.00015251062090722154" />
     </inertial>
     
     <visual>
@@ -11111,13 +11124,13 @@
     <visual>
       <origin xyz="-3.2751579226442118E-15 2.9420910152566648E-15 -0.017156976026982851" rpy="-1.9428902930940243E-15 5.3290705182007514E-15 1.2262462200752278" />
       <geometry>
-        <mesh filename="/home/coffee/rm_sim_spear/assets/总装_urdf/meshes/M3508___________268__17_STEP_默认_fa9f1ab2c32e97e8.stl" />
+        <mesh filename="/home/coffee/rm_sim_spear/assets/总装_urdf/meshes/M3508___________268__17_STEP_默认_196a7cd650a83b1e.stl" />
       </geometry>
     </visual>
     <collision>
       <origin xyz="-3.2751579226442118E-15 2.9420910152566648E-15 -0.017156976026982851" rpy="-1.9428902930940243E-15 5.3290705182007514E-15 1.2262462200752278" />
       <geometry>
-        <mesh filename="/home/coffee/rm_sim_spear/assets/总装_urdf/meshes/M3508___________268__17_STEP_默认_fa9f1ab2c32e97e8.stl" />
+        <mesh filename="/home/coffee/rm_sim_spear/assets/总装_urdf/meshes/M3508___________268__17_STEP_默认_196a7cd650a83b1e.stl" />
       </geometry>
     </collision>
   </link>
@@ -11310,6 +11323,19 @@
     
     
     <visual>
+      <origin xyz="-0.058508296129532886 0.054559868805000467 0.0089999999999994806" rpy="1.5707963267948961 1.3584462691249977E-15 1.0993565155864753" />
+      <geometry>
+        <mesh filename="/home/coffee/rm_sim_spear/assets/总装_urdf/meshes/dm_j4310_2ec_默认_5f36196a63bcc568.stl" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="-0.058508296129532886 0.054559868805000467 0.0089999999999994806" rpy="1.5707963267948961 1.3584462691249977E-15 1.0993565155864753" />
+      <geometry>
+        <mesh filename="/home/coffee/rm_sim_spear/assets/总装_urdf/meshes/dm_j4310_2ec_默认_5f36196a63bcc568.stl" />
+      </geometry>
+    </collision>
+    
+    <visual>
       <origin xyz="-0.058508296129532886 0.054559868805000522 0.00050000000000013922" rpy="0 1.5707963267948966 -1.5186373624050076" />
       <geometry>
         <mesh filename="/home/coffee/rm_sim_spear/assets/总装_urdf/meshes/主动带轮39齿_默认_cf6bd29d8c9fad93.stl" />
@@ -11527,6 +11553,19 @@
       <origin xyz="0.070000000000000243 5.5511151231257827E-17 0.14249999999999965" rpy="3.1415926535897931 -2.3869795029440858E-15 -1.5707963267949008" />
       <geometry>
         <mesh filename="/home/coffee/rm_sim_spear/assets/总装_urdf/meshes/发射机构支架_默认_dccd5588dcb407e2.stl" />
+      </geometry>
+    </collision>
+    
+    <visual>
+      <origin xyz="0.074500000000000191 5.5511151231257827E-17 0.1424999999999996" rpy="-3.1415926535897931 2.109423746787797E-15 1.5707963267948921" />
+      <geometry>
+        <mesh filename="/home/coffee/rm_sim_spear/assets/总装_urdf/meshes/dm_j4310_2ec_默认_5f36196a63bcc568.stl" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0.074500000000000191 5.5511151231257827E-17 0.1424999999999996" rpy="-3.1415926535897931 2.109423746787797E-15 1.5707963267948921" />
+      <geometry>
+        <mesh filename="/home/coffee/rm_sim_spear/assets/总装_urdf/meshes/dm_j4310_2ec_默认_5f36196a63bcc568.stl" />
       </geometry>
     </collision>
     
@@ -12476,21 +12515,21 @@
     <parent link="base_link" />
     <child link="link_1" />
     <origin xyz="-0.029413616587290525 -0.097553374823720326 -0.013650010615162286" rpy="-1.5707963267948983 -0.39269908169872619 0.78539816339745827" />
-    <axis xyz="1.1102230246251568E-16 -1.3877787807814459E-16 1" />
+    <axis xyz="1.1102230246251568E-16 -2.2204460492503136E-16 1" />
     <limit effort="1000" velocity="1" />
   </joint>
   <joint name="link_3_joint" type="continuous">
     <parent link="base_link" />
     <child link="link_3" />
     <origin xyz="0.33547961544617033 -0.46844664384072021 -0.013650010615161363" rpy="1.5707963267948977 0.3926990816987263 0.7853981633974505" />
-    <axis xyz="2.2204460492503131E-16 -8.3266726846886741E-17 1" />
+    <axis xyz="2.7755575615628914E-16 -1.6653345369377348E-16 1" />
     <limit effort="1000" velocity="1" />
   </joint>
   <joint name="link_4_joint" type="continuous">
     <parent link="base_link" />
     <child link="link_4" />
     <origin xyz="0.33533205152146817 -0.097408295515697393 -0.013650010615162238" rpy="1.5707963267949003 -1.178097245096168 2.3732987168618913" />
-    <axis xyz="-8.3266726846886765E-17 -5.5511151231257839E-17 1" />
+    <axis xyz="-1.1102230246251568E-16 -5.5511151231257839E-17 1" />
     <limit effort="1000" velocity="1" />
   </joint>
   <joint name="link_5_joint" type="revolute">

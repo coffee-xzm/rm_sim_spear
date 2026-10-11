@@ -205,6 +205,17 @@ def write_mujoco_urdf(path: str | Path, output_path: str | Path, ignored_meshes:
     """Write a self-contained local URDF with ignored mesh references removed."""
     source = Path(path).expanduser().resolve()
     root = _absolute_mesh_tree(source)
+    # Keep fixed links as explicit MuJoCo bodies.  The UE binding plan needs
+    # anchors for base_link, armor_link_* and cam_link_8 even when their joints
+    # are fixed; MuJoCo's default static-body fusion would otherwise remove
+    # them from data.xpos/data.xquat and leave their UE anchors frozen.
+    compiler = root.find("mujoco/compiler")
+    if compiler is None:
+        mujoco = root.find("mujoco")
+        if mujoco is None:
+            mujoco = ET.SubElement(root, "mujoco")
+        compiler = ET.SubElement(mujoco, "compiler")
+    compiler.set("fusestatic", "false")
     for link in root.findall("link"):
         for tag in ("visual", "collision"):
             for item in list(link.findall(tag)):
@@ -231,15 +242,36 @@ def make_override_template(manifest: dict[str, Any]) -> dict[str, Any]:
         "default_visual_source": "urdf",
         "ignored_meshes": manifest["validation"].get("mujoco_incompatible_meshes", []),
         "scene_bindings": {
+            "robot": {
+                "link": "base_link",
+                "actor_name": "body",
+                "actor_path": "Scene/body",
+                "runtime_actor_name": None,
+                "runtime_child_names": [],
+                "reset_relative_transform": True,
+            },
             "armor": {
+                # ``enabled: false`` (or ``"armor": null``) is the documented way
+                # to drop the scene-template armor binding for a robot whose
+                # armor links carry per-link ``visual_source: ue_asset``
+                # overrides instead; see docs/urdf_workflow.md.
+                "enabled": True,
                 "link_regex": "^armor_link.*$",
                 "actor_name_template": "armor_{index}",
+                "actor_path": None,
+                "runtime_actor_name": None,
+                "runtime_child_names": [],
+                "clone_per_link": False,
+                "clone_name_template": "RMSim/armor_{index}",
+                "hide_template": True,
                 "material_slot": 0,
                 "material_asset": None,
             },
             "camera": {
                 "link_regex": "^cam.*$",
                 "actor_name": "camera_sensor",
+                "actor_path": None,
+                "mode": "spear_sensor",
                 "ue_class": "/SpContent/Blueprints/BP_CameraSensor.BP_CameraSensor_C",
             },
             "imu": {

@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "level": "/Game/creo_stp",
+  "visual_profile": "/sim/DA_RuneVisualProfile",
+  "fixed_camera": "CineCameraActor",
+  "red": {
+    "visual_root": "Scene/rune1",
+    "center_root": "Scene/centerR",
+    "axis_paths": [
+      "Scene/rune1/fan1_axis",
+      "Scene/rune1/fan1_axis_001",
+      "Scene/rune1/fan1_axis_002",
+      "Scene/rune1/fan1_axis_003",
+      "Scene/rune1/fan1_axis_004"
+    ],
+    "rotation_axis_local": [0.0, 1.0, 0.0],
+    "rotation_sign": 1
+  },
+  "blue": {
+    "visual_root": "Scene/rune1_001",
+    "center_root": "Scene/centerR_001",
+    "axis_paths": [
+      "Scene/rune1_001/fan1_axis_005",
+      "Scene/rune1_001/fan1_axis_006",
+      "Scene/rune1_001/fan1_axis_007",
+      "Scene/rune1_001/fan1_axis_008",
+      "Scene/rune1_001/fan1_axis_009"
+    ],
+    "rotation_axis_local": [0.0, 1.0, 0.0],
+    "rotation_sign": -1
+  },
+  "armor": {
+    "radius_cm": 5.0,
+    "thickness_cm": 0.4,
+    "local_location_cm": [0.0, 0.0, 0.0],
+    "local_rotation_deg": [0.0, 0.0, 0.0]
+  }
+}

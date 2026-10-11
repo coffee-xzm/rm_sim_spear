@@ -38,9 +38,11 @@
 
 ### 2.1 SPEAR 为基座
 
+上游论文:[`2607.06701v1.pdf`](2607.06701v1.pdf) — *SPEAR: A Simulator for Photorealistic Embodied AI Research*（arXiv:2607.06701v1）。编程模型的权威口径在它的 §3,系统实现在 §4,性能数字在 §5。
+
 **它的护城河**:
 
-- **帧内事务模型**:`begin_frame`(帧首下发动作)/ `end_frame`(帧尾取观测),同一帧内确定性、副作用立即可见。事务之间不保证连续 UE 帧;严格模式用 `single_step=True`。
+- **帧内事务模型**:`begin_frame`(帧首下发动作)/ `end_frame`(帧尾取观测),同一帧内确定性、副作用立即可见。事务之间不保证连续 UE 帧;严格模式用**暂停 + 事务内解暂停/暂停**(普通 `end_frame()`,**不用** `single_step=True`——它的阻塞点在帧首、早于 Slate 和 `GEngine->Tick()`,会把编辑器整个冻住,见 [`architecture.md`](architecture.md) §4.1)。
 - **自研相机**:三种缓冲(0/1/2 帧延迟)+ GPU 异步回读 + 共享内存零拷贝;多模态 GT(depth / normal / segmentation / material ID / PBR)。论文口径 1080p @73fps。
 - **14K UE 函数直接暴露**,UE 只当"编辑器 + 渲染端"完全成立。
 
@@ -48,7 +50,7 @@
 
 1. 没有物理服务、没有 IMU、没有关节/接触传感器 → 物理必须交给 MuJoCo。
 2. 协同是"位姿镜像",不是双向物理耦合;被同步的 UE 物体必须**让位**(关掉自身物理)。
-3. 同步 RPC 会阻塞帧 → 高频环不能塞进主循环,必须 `send_async` / `call_async`,或放到 MuJoCo 侧。
+3. 同步 RPC 会阻塞帧 → 高频环不能塞进主循环,必须 `send_async` / `call_async`,或放到 MuJoCo 侧。**注意这是"调用量大"时的结论**:本项目实测每帧十几次调用时两种方式**一样快**(21.7 vs 22.6 ms),`--sync-pose` 不是性能开关(更正记录见 [`render_budget.md` §15](render_budget.md))。
 4. **`read_pixels()` 不带时间戳** → 需要自己绑定帧号/时刻,或加一个 SpFunc。
 5. UE 版本绑定:当前 checkout 是 `ue-58`(UE5.8);`main` 对 UE5.5。
 
@@ -148,7 +150,7 @@ rm_sim_spear/
 | **D2** | 时间真源 | **MuJoCo sim time**,单一权威 | 阶段 0 | [`decisions.md`](decisions.md) |
 | **D3** | ROS2 定位 | **独立标准适配层**;仿真拥有时钟;图像默认共享内存并提供 ROS2 兼容模式 | 阶段 0 | [`decisions.md`](decisions.md) |
 | **D4** | 弹丸实现 | 独立 `ProjectileSubsystem`;UE 只做 QueryOnly 查询,规则只消费 `HitEvent` | 阶段 0 | [`projectile.md`](projectile.md) |
-| **D5** | 同步模型 | 每个对外仿真帧生成一个 `FrameCommit`(内部可含 N 个 MuJoCo 子步);严格模式使用暂停 + `single_step` | 阶段 1 | [`architecture.md`](architecture.md) |
+| **D5** | 同步模型 | 每个对外仿真帧生成一个 `FrameCommit`(内部可含 N 个 MuJoCo 子步);严格模式使用暂停 + 事务内解暂停/暂停,不用 `single_step` | 阶段 1 | [`architecture.md`](architecture.md) |
 | **D6** | 帧来源 | 回读元数据必须携带 `commit_id`/`ue_frame_id`;不以单缓冲掩盖来源问题 | 阶段 1 | [`decisions.md`](decisions.md) |
 | **D7** | ROS2 环境 | **系统 ROS2 Humble 独立进程**优先,不把 Python 版本耦合到 SPEAR | 阶段 0 | [`risks.md`](risks.md) |
 | **D8** | 位姿同步带宽 | 40 个对象以内用 `send_async`;更多则加批量 UFUNCTION | 阶段 2 | [`architecture.md`](architecture.md) |

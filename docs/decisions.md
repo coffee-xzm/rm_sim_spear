@@ -49,7 +49,7 @@
 - 一个 `TimeSource`:`sim_tick`、`sim_time_ns`、`step`、`advance(n)`、`paused`。**谁都不许用系统时间作为仿真时间。**
 - 每个传感器包引用一个 `FrameCommit`;不要求事务发生在连续 UE 帧,但禁止跨提交点拼接数据。
 - ROS2 侧发 `/clock`,消费者用 `use_sim_time:=true`。
-- 严格模式启动 UE 游戏世界为 paused 状态,事务内临时解暂停、应用快照、推进目标游戏帧、再暂停;或使用 `end_frame(single_step=True)` 防止事务之间推进额外游戏帧。UE 应用和编辑器仍保持可交互,但交互不产生新的仿真提交点。
+- 严格模式启动 UE 游戏世界为 paused 状态,事务内临时解暂停、应用快照、推进目标游戏帧、再暂停;事务用普通 `end_frame()` 收尾。**不用 `end_frame(single_step=True)`**——它把游戏线程阻塞在帧首(早于 Slate 输入与 `GEngine->Tick()`),编辑器会整个窗口冻结,理由与源码位置见 [`architecture.md`](architecture.md) §4.1。UE 应用和编辑器因此保持可交互,但交互不产生新的仿真提交点。
 
 **已知缺口(必须解)**
 
@@ -116,11 +116,11 @@ SPEAR 的 `read_pixels()` **只返回数组,没有帧标识或时间戳**(见 `S
 
 ## D5 — 同步模型:提交点 + run/pause/step
 
-**结论**:**UE 游戏世界在严格模式下暂停,编辑器和 UE 应用仍可交互；每个对外仿真帧必须形成一个明确提交点。** 严格模式使用暂停 + `single_step`。
+**结论**:**UE 游戏世界在严格模式下暂停,编辑器和 UE 应用仍可交互；每个对外仿真帧必须形成一个明确提交点。** 严格模式使用"暂停 + 事务内解暂停/暂停",**不用 `single_step`**。
 
 **理由**
 
-- SPEAR 的 UE 是实时游戏进程；暂停游戏世界后,应用、编辑器、视口和输入仍然工作。所以可以停在一个仿真提交点查看和编辑场景。
+- SPEAR 的 UE 是实时游戏进程；暂停游戏世界后,应用、编辑器、视口和输入仍然工作。所以可以停在一个仿真提交点查看和编辑场景。**这条只在"暂停 + 普通 `end_frame()`"下成立**：`single_step=True` 阻塞的是游戏线程本身（帧首 `OnBeginFrame`,早于 Slate 与 `GEngine->Tick()`），编辑器会整体冻结。上游论文把两者讲成替代方案（`2607.06701v1.pdf` §3）,没有理由把代价最高的那个再叠加上去。
 - 二者的真正区别是:**游戏世界是否推进**、**谁推进 MuJoCo 仿真时间**、以及**渲染帧与仿真时刻是否一一对应**。
 - **为什么必须区分**:SPEAR 相机有 0/1/2 帧回读延迟。旧图像不是错误,但必须通过 `commit_id` 证明它对应哪个提交点。
 
@@ -134,9 +134,11 @@ while running:
         mj_step(model, data)
     mj_forward(model, data)
     commit = make_commit(data)
-    with begin_frame(): push_snapshot(commit)
-    with end_frame(single_step=True): enqueue_capture(commit)
+    with begin_frame(): unpause(); push_snapshot(commit)
+    with end_frame(): enqueue_capture(commit); pause()
 ```
+
+> **迁移状态（2026-10-10）**：`rm_sim_spear/render.py` 与 `tools/run_spear_sim.py` 已改用普通 `end_frame()`；`tools/run_physics_sim.py` 的无头吞吐路径仍保留 `single_step=True`（成本模型建立在该口径上）。`read_pixels()`/缓冲 lag 两处口径还没有逐帧对拍。
 
 采集/严格闭环时使用提交点锁步;手动调场景/看效果时允许 UE 自由渲染。弹丸可在 UE 中继续运行,命中事件按独立子系统协议回传。
 
@@ -177,6 +179,42 @@ while running:
 **验收**:标准 ROS2 节点能收发时钟、传感器和控制消息;QoS 能与 `ros2 topic echo`/标准消费者匹配;核心进程不依赖 ROS2 Python 版本。
 
 **回退**:暂时关闭 ROS2 adapter,核心仿真仍可单独运行。
+
+---
+
+## D8 — 装甲视觉来自 per-link `ue_asset` 覆盖，运行时不再克隆 `Scene/armor`
+
+**结论**:`armor_link_*` 的视觉由 `ue_overrides.json` 的 per-link `visual_source: ue_asset`
+提供（关卡自带的灯条装甲模块），并显式关闭 `scene_bindings.armor`（`"enabled": false`）。
+不再走"克隆 `Scene/armor` 整组到四个 link"的老路。
+
+**理由(本机实测)**
+
+| 项 | 实测 |
+|---|---|
+| URDF 自带装甲 mesh | 只有 `/Engine/EngineMaterials/WorldGridMaterial`，没有材质 → 导入后"装甲板没材质" |
+| `Scene/armor` 聚合组 | 组根 `armor_tune_node_4` + 4 个子件的 CAD 调参副本，实际位置在**地板下约 1.7 m** |
+| 克隆 vs `"armor": []` 的像素差 | **0 像素**（同物理帧，`max |Δbase_link_x| = 0.000000 cm`）→ 克隆只带来语义错误，没有画面收益 |
+| 场景资产覆盖后的像素差 | 942 px（URDF 装甲）→ 2021 px（场景组覆盖）→ 视觉确认真实装甲出现在 link 上 |
+
+**落地**
+1. `pipeline/visual_override.py` + `tools/import_urdf_visuals.py --overrides` 解释
+   `visual_source` / `ue_asset` / `local_transform`，把资产挂到 link 锚点下并打
+   `RMSimRobot=<robot>` + `RMSimLink=<link>` 标签。
+2. `pipeline/scene_binding_plan.py` 支持 `"armor": null` 与 `"enabled": false` 关闭该段，
+   关闭时**不产生** `no links matched armor.link_regex` 警告（绑定器把警告当致命错误）。
+3. 装甲 link 仍是位姿锚点：计划里 13 条 `links` 全部交给位姿同步器，装甲只是锚点的子件。
+4. 摆放（用户手摆角度烘焙进子件、父节点保持 URDF 值）见 [`urdf_workflow.md`](urdf_workflow.md)。
+
+**验收**:`--verify-armor-links` 改查导入的装甲子件（`RMSimLink=<link>`）在锚点被扰动后
+是否保持固定偏移（它的预检也从"计划必须有 `armor` 条目"改成"必须有 `armor_link_*` link"，
+否则新语义下正常计划会被直接拒绝）；`tests/test_scene_binding_plan.py` 锁住 `enabled:false` /
+`null` / 键缺失三种语义，以及出厂文件必须展开成 `armor == []` 且装甲 link 仍在 `links` 里。
+像素 A/B（同机位、同物理、只差克隆）：`frame_0023` 变化像素 `>32` 为 **0**、`mean|d| = 0.061`；
+`fed_poses_cm` 四个 `armor_link_*` 逐位一致；峰值显存 3752 → 3823 MiB（噪声）。
+
+**回退**:`"enabled": true`（或删掉该键）后重新展开计划，即回到克隆路径；克隆时代的代码与
+`hide_template` 行为都还在。
 
 ---
 

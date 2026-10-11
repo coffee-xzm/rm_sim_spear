@@ -1,0 +1,36 @@
+{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "1.0",
+	"FriendlyName": "sim",
+	"Description": "sim server",
+	"Category": "Other",
+	"CreatedBy": "xzm",
+	"CreatedByURL": "",
+	"DocsURL": "",
+	"MarketplaceURL": "",
+	"SupportURL": "",
+	"CanContainContent": true,
+	"IsBetaVersion": false,
+	"IsExperimentalVersion": false,
+	"Installed": false,
+	"Plugins": [
+		{
+			"Name": "EditorScriptingUtilities",
+			"Enabled": true,
+			"TargetAllowList": ["Editor"]
+		}
+	],
+	"Modules": [
+		{
+			"Name": "sim",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		},
+		{
+			"Name": "simEditor",
+			"Type": "Editor",
+			"LoadingPhase": "Default"
+		}
+	]
+}

@@ -1,0 +1,16 @@
+WARNING Tue Oct  6 15:36:43 2026: Nan, Inf or huge value in QACC at DOF 0. The simulation is unstable. Time = 0.1000.
+
+WARNING Tue Oct  6 15:54:31 2026: Nan, Inf or huge value in QACC at DOF 1. The simulation is unstable. Time = 0.0050.
+
+WARNING Tue Oct  6 15:55:58 2026: Nan, Inf or huge value in QACC at DOF 1. The simulation is unstable. Time = 0.0050.
+
+WARNING Tue Oct  6 15:56:07 2026: Nan, Inf or huge value in QACC at DOF 10. The simulation is unstable. Time = 0.9490.
+
+ERROR Sat Oct 10 18:11:09 2026: could not initialize GLFW
+
+ERROR Sat Oct 10 18:11:12 2026: could not initialize GLFW
+
+WARNING Sat Oct 10 18:55:52 2026: Could not find decoder for resource 'generated'
+
+WARNING Sun Oct 11 18:12:35 2026: Nan, Inf or huge value in QACC at DOF 0. The simulation is unstable. Time = 1.9960.
+

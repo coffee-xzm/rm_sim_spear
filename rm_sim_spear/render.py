@@ -99,6 +99,7 @@ class SpearRenderPort:
         bind_frame_metadata: Callable[[Snapshot], None] | None = None,
         metadata_reset: Callable[[], None] | None = None,
         capture_reset: Callable[[], None] | None = None,
+        on_reset: Callable[[], None] | None = None,
         sensor_id: str = "default",
         modality: str = "rgb",
     ):
@@ -117,6 +118,7 @@ class SpearRenderPort:
         # cannot safely infer how to flush that queue, so the integration
         # supplies an explicit reset/reinitialize hook when one is needed.
         self.capture_reset = capture_reset
+        self.on_reset = on_reset
         self.sensor_id = sensor_id
         self.modality = modality
         self.buffering_mode = buffering_mode
@@ -138,12 +140,24 @@ class SpearRenderPort:
         self._pending.clear()
         if self.capture_reset is not None:
             self.capture_reset()
+        if self.on_reset is not None:
+            self.on_reset()
         self._discard_reads = self._initial_priming_frames
         self._primed = self.buffering_mode == "SingleBuffered"
         self._metadata_reset_pending = self.metadata_reset is not None
 
     def prime(self) -> None:
-        """Prime SPEAR's buffered readback before the first simulation commit."""
+        """Prime SPEAR's buffered readback before the first simulation commit.
+
+        Uses a plain ``end_frame()`` on purpose.  ``single_step=True`` would
+        pin the game thread at the top of the next frame (inside
+        ``FCoreDelegates::OnBeginFrame``, ahead of Slate and ``GEngine->Tick``),
+        which freezes the whole Unreal Editor between transactions and leaves
+        the frame state at ``"request_begin_next_frame"``.  The game world still
+        advances exactly one tick per transaction because the frame body is
+        bracketed by ``set_game_paused(False)``/``(True)``.  See
+        ``docs/architecture.md`` section 4.1.
+        """
         if self._primed:
             return
         for _ in range(self._initial_priming_frames):
@@ -151,7 +165,7 @@ class SpearRenderPort:
                 self.set_game_paused(True)
                 self._reset_metadata_in_frame()
                 self._enqueue_copy(None)
-            with self.instance.end_frame(single_step=True):
+            with self.instance.end_frame():
                 pass
         self._primed = True
 
@@ -180,12 +194,17 @@ class SpearRenderPort:
             else:
                 pass
 
-        with self.instance.end_frame(single_step=True):
+        capture = None
+        with self.instance.end_frame():
             if self.buffering_mode in {"SingleBuffered", "DoubleBuffered"}:
                 data_bundle = self.capture_component.read_pixels()
             self.set_game_paused(True)
+            # readback_metadata() is an SpFunc, i.e. a game-thread entry point,
+            # and SPEAR only accepts those inside a begin_frame()/end_frame()
+            # block.  Pairing the readback with its metadata therefore has to
+            # happen in this transaction, not after it.
+            capture = self._consume_readback(data_bundle)
 
-        capture = self._consume_readback(data_bundle)
         if self.buffering_mode != "SingleBuffered":
             self._pending[snapshot.commit.commit_id] = snapshot
         return [capture] if capture is not None else []

@@ -28,6 +28,19 @@ PYTHONPATH=. python -m rm_sim_spear.cli examples/free_fall.xml \
 PYTHONPATH=. python -m unittest discover -s tests -v
 ```
 
+`tools/test_urdf_views.py` 的显存闸门与崩溃诊断集中在
+[`rm_sim_spear/vram.py`](../rm_sim_spear/vram.py)：启动前空闲显存 preflight、
+`nvidia-smi` 采样（`peak_used_mb` / `min_free_mb`，逐行 flush 以便崩溃后仍有记录）、
+UE 日志崩溃签名解析（`Out Of Memory`、`Failed to allocate Device Memory`、
+`Fatal error`、`Fatal X11 IO Error`）、以及 UE 进程存活探测（命中即退出，不等 RPC
+超时）。这些函数的离线测试在 [`tests/test_vram.py`](../tests/test_vram.py)。
+`--verify-armor-links` 的绑定判定在 [`rm_sim_spear/pose_sync.py`](../rm_sim_spear/pose_sync.py) 的
+`check_attachment()`：用扰动位姿前后「锚点位移」与「克隆相对锚点位移」两个量判断装甲是否
+真的挂在自己的 link 上（离线测试在 [`tests/test_pose_sync.py`](../tests/test_pose_sync.py)）。
+独立运行（`UnrealEditor -game`）下机器人视觉由
+[`rm_sim_spear/spear_scene_binding.py`](../rm_sim_spear/spear_scene_binding.py) 的
+`_spawn_runtime_static_mesh_actor()` 在运行时加载 `/Game/<actor_name>` 资产并 spawn。
+
 UE companion plugin 已用 UE 5.8 Linux `SpearSimEditor` 目标编译通过；
 `bridge/idl/sim_msgs` 已在 ROS2 Humble 下用 `colcon` 生成并安装，适配器
 用系统 Python 3.10 加载生成消息完成 smoke test。

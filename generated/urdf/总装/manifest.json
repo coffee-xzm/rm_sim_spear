@@ -1767,7 +1767,7 @@
           },
           "geometry": {
             "type": "mesh",
-            "filename": "meshes/CONN_TH_XT30UPB_F_CONN_TH_XT30UPB_F_2U0e_step_默认_05c5c86370327252.stl"
+            "filename": "meshes/CONN_TH_XT30UPB_F_CONN_TH_XT30UPB_F_2U0e_step_默认_e79a7d8bacbf2831.stl"
           },
           "material": {
             "name": null,
@@ -1778,7 +1778,7 @@
               1.0
             ]
           },
-          "mesh_path": "/home/coffee/rm_sim_spear/assets/总装_urdf/meshes/CONN_TH_XT30UPB_F_CONN_TH_XT30UPB_F_2U0e_step_默认_05c5c86370327252.stl",
+          "mesh_path": "/home/coffee/rm_sim_spear/assets/总装_urdf/meshes/CONN_TH_XT30UPB_F_CONN_TH_XT30UPB_F_2U0e_step_默认_e79a7d8bacbf2831.stl",
           "mesh_exists": true
         },
         {
@@ -3147,7 +3147,7 @@
           },
           "geometry": {
             "type": "mesh",
-            "filename": "meshes/CONN_TH_XT30UPB_F_CONN_TH_XT30UPB_F_2U0e_step_默认_05c5c86370327252.stl"
+            "filename": "meshes/CONN_TH_XT30UPB_F_CONN_TH_XT30UPB_F_2U0e_step_默认_e79a7d8bacbf2831.stl"
           },
           "material": {
             "name": null,
@@ -3158,7 +3158,7 @@
               1.0
             ]
           },
-          "mesh_path": "/home/coffee/rm_sim_spear/assets/总装_urdf/meshes/CONN_TH_XT30UPB_F_CONN_TH_XT30UPB_F_2U0e_step_默认_05c5c86370327252.stl",
+          "mesh_path": "/home/coffee/rm_sim_spear/assets/总装_urdf/meshes/CONN_TH_XT30UPB_F_CONN_TH_XT30UPB_F_2U0e_step_默认_e79a7d8bacbf2831.stl",
           "mesh_exists": true
         },
         {
@@ -3177,7 +3177,7 @@
           },
           "geometry": {
             "type": "mesh",
-            "filename": "meshes/CONN_TH_XT30UPB_F_CONN_TH_XT30UPB_F_2U0e_step_默认_05c5c86370327252.stl"
+            "filename": "meshes/CONN_TH_XT30UPB_F_CONN_TH_XT30UPB_F_2U0e_step_默认_e79a7d8bacbf2831.stl"
           },
           "material": {
             "name": null,
@@ -3188,7 +3188,7 @@
               1.0
             ]
           },
-          "mesh_path": "/home/coffee/rm_sim_spear/assets/总装_urdf/meshes/CONN_TH_XT30UPB_F_CONN_TH_XT30UPB_F_2U0e_step_默认_05c5c86370327252.stl",
+          "mesh_path": "/home/coffee/rm_sim_spear/assets/总装_urdf/meshes/CONN_TH_XT30UPB_F_CONN_TH_XT30UPB_F_2U0e_step_默认_e79a7d8bacbf2831.stl",
           "mesh_exists": true
         },
         {
@@ -3207,7 +3207,7 @@
           },
           "geometry": {
             "type": "mesh",
-            "filename": "meshes/CONN_TH_XT30UPB_F_CONN_TH_XT30UPB_F_2U0e_step_默认_05c5c86370327252.stl"
+            "filename": "meshes/CONN_TH_XT30UPB_F_CONN_TH_XT30UPB_F_2U0e_step_默认_e79a7d8bacbf2831.stl"
           },
           "material": {
             "name": null,
@@ -3218,7 +3218,7 @@
               1.0
             ]
           },
-          "mesh_path": "/home/coffee/rm_sim_spear/assets/总装_urdf/meshes/CONN_TH_XT30UPB_F_CONN_TH_XT30UPB_F_2U0e_step_默认_05c5c86370327252.stl",
+          "mesh_path": "/home/coffee/rm_sim_spear/assets/总装_urdf/meshes/CONN_TH_XT30UPB_F_CONN_TH_XT30UPB_F_2U0e_step_默认_e79a7d8bacbf2831.stl",
           "mesh_exists": true
         },
         {
@@ -3237,7 +3237,7 @@
           },
           "geometry": {
             "type": "mesh",
-            "filename": "meshes/Board_31iW_step_默认_ce189fdf03dd9acd.stl"
+            "filename": "meshes/Board_31iW_step_默认_86ca4e34ff15f883.stl"
           },
           "material": {
             "name": null,
@@ -3248,7 +3248,7 @@
               1.0
             ]
           },
-          "mesh_path": "/home/coffee/rm_sim_spear/assets/总装_urdf/meshes/Board_31iW_step_默认_ce189fdf03dd9acd.stl",
+          "mesh_path": "/home/coffee/rm_sim_spear/assets/总装_urdf/meshes/Board_31iW_step_默认_86ca4e34ff15f883.stl",
           "mesh_exists": true
         },
         {
@@ -8217,7 +8217,7 @@
           },
           "geometry": {
             "type": "mesh",
-            "filename": "meshes/CONN_TH_XT30PW_M_CONN_TH_XT30PW_M_cAaz_step_默认_e047b1256fecfaf2.stl"
+            "filename": "meshes/CONN_TH_XT30PW_M_CONN_TH_XT30PW_M_cAaz_step_默认_0fec3f1561504935.stl"
           },
           "material": {
             "name": null,
@@ -8228,7 +8228,7 @@
               1.0
             ]
           },
-          "mesh_path": "/home/coffee/rm_sim_spear/assets/总装_urdf/meshes/CONN_TH_XT30PW_M_CONN_TH_XT30PW_M_cAaz_step_默认_e047b1256fecfaf2.stl",
+          "mesh_path": "/home/coffee/rm_sim_spear/assets/总装_urdf/meshes/CONN_TH_XT30PW_M_CONN_TH_XT30PW_M_cAaz_step_默认_0fec3f1561504935.stl",
           "mesh_exists": true
         },
         {
@@ -9117,7 +9117,7 @@
           },
           "geometry": {
             "type": "mesh",
-            "filename": "meshes/CONN_TH_XT30UPB_F_CONN_TH_XT30UPB_F_2U0e_step_默认_05c5c86370327252.stl"
+            "filename": "meshes/CONN_TH_XT30UPB_F_CONN_TH_XT30UPB_F_2U0e_step_默认_e79a7d8bacbf2831.stl"
           },
           "material": {
             "name": null,
@@ -9128,7 +9128,7 @@
               1.0
             ]
           },
-          "mesh_path": "/home/coffee/rm_sim_spear/assets/总装_urdf/meshes/CONN_TH_XT30UPB_F_CONN_TH_XT30UPB_F_2U0e_step_默认_05c5c86370327252.stl",
+          "mesh_path": "/home/coffee/rm_sim_spear/assets/总装_urdf/meshes/CONN_TH_XT30UPB_F_CONN_TH_XT30UPB_F_2U0e_step_默认_e79a7d8bacbf2831.stl",
           "mesh_exists": true
         },
         {
@@ -9207,7 +9207,7 @@
           },
           "geometry": {
             "type": "mesh",
-            "filename": "meshes/CONN_TH_XT30UPB_F_CONN_TH_XT30UPB_F_2U0e_step_默认_05c5c86370327252.stl"
+            "filename": "meshes/CONN_TH_XT30UPB_F_CONN_TH_XT30UPB_F_2U0e_step_默认_e79a7d8bacbf2831.stl"
           },
           "material": {
             "name": null,
@@ -9218,7 +9218,7 @@
               1.0
             ]
           },
-          "mesh_path": "/home/coffee/rm_sim_spear/assets/总装_urdf/meshes/CONN_TH_XT30UPB_F_CONN_TH_XT30UPB_F_2U0e_step_默认_05c5c86370327252.stl",
+          "mesh_path": "/home/coffee/rm_sim_spear/assets/总装_urdf/meshes/CONN_TH_XT30UPB_F_CONN_TH_XT30UPB_F_2U0e_step_默认_e79a7d8bacbf2831.stl",
           "mesh_exists": true
         },
         {
@@ -9537,7 +9537,7 @@
           },
           "geometry": {
             "type": "mesh",
-            "filename": "meshes/CONN_TH_XT30PW_M_CONN_TH_XT30PW_M_cAaz_step_默认_e047b1256fecfaf2.stl"
+            "filename": "meshes/CONN_TH_XT30PW_M_CONN_TH_XT30PW_M_cAaz_step_默认_0fec3f1561504935.stl"
           },
           "material": {
             "name": null,
@@ -9548,7 +9548,7 @@
               1.0
             ]
           },
-          "mesh_path": "/home/coffee/rm_sim_spear/assets/总装_urdf/meshes/CONN_TH_XT30PW_M_CONN_TH_XT30PW_M_cAaz_step_默认_e047b1256fecfaf2.stl",
+          "mesh_path": "/home/coffee/rm_sim_spear/assets/总装_urdf/meshes/CONN_TH_XT30PW_M_CONN_TH_XT30PW_M_cAaz_step_默认_0fec3f1561504935.stl",
           "mesh_exists": true
         },
         {
@@ -9987,7 +9987,7 @@
           },
           "geometry": {
             "type": "mesh",
-            "filename": "meshes/CONN_TH_XT30PW_M_CONN_TH_XT30PW_M_cAaz_step_默认_e047b1256fecfaf2.stl"
+            "filename": "meshes/CONN_TH_XT30PW_M_CONN_TH_XT30PW_M_cAaz_step_默认_0fec3f1561504935.stl"
           },
           "material": {
             "name": null,
@@ -9998,7 +9998,7 @@
               1.0
             ]
           },
-          "mesh_path": "/home/coffee/rm_sim_spear/assets/总装_urdf/meshes/CONN_TH_XT30PW_M_CONN_TH_XT30PW_M_cAaz_step_默认_e047b1256fecfaf2.stl",
+          "mesh_path": "/home/coffee/rm_sim_spear/assets/总装_urdf/meshes/CONN_TH_XT30PW_M_CONN_TH_XT30PW_M_cAaz_step_默认_0fec3f1561504935.stl",
           "mesh_exists": true
         },
         {
@@ -11999,7 +11999,7 @@
           },
           "geometry": {
             "type": "mesh",
-            "filename": "meshes/CONN_TH_XT30UPB_F_CONN_TH_XT30UPB_F_2U0e_step_默认_05c5c86370327252.stl"
+            "filename": "meshes/CONN_TH_XT30UPB_F_CONN_TH_XT30UPB_F_2U0e_step_默认_e79a7d8bacbf2831.stl"
           },
           "material": {
             "name": null,
@@ -12010,7 +12010,7 @@
               1.0
             ]
           },
-          "mesh_path": "/home/coffee/rm_sim_spear/assets/总装_urdf/meshes/CONN_TH_XT30UPB_F_CONN_TH_XT30UPB_F_2U0e_step_默认_05c5c86370327252.stl",
+          "mesh_path": "/home/coffee/rm_sim_spear/assets/总装_urdf/meshes/CONN_TH_XT30UPB_F_CONN_TH_XT30UPB_F_2U0e_step_默认_e79a7d8bacbf2831.stl",
           "mesh_exists": true
         },
         {
@@ -13379,7 +13379,7 @@
           },
           "geometry": {
             "type": "mesh",
-            "filename": "meshes/CONN_TH_XT30UPB_F_CONN_TH_XT30UPB_F_2U0e_step_默认_05c5c86370327252.stl"
+            "filename": "meshes/CONN_TH_XT30UPB_F_CONN_TH_XT30UPB_F_2U0e_step_默认_e79a7d8bacbf2831.stl"
           },
           "material": {
             "name": null,
@@ -13390,7 +13390,7 @@
               1.0
             ]
           },
-          "mesh_path": "/home/coffee/rm_sim_spear/assets/总装_urdf/meshes/CONN_TH_XT30UPB_F_CONN_TH_XT30UPB_F_2U0e_step_默认_05c5c86370327252.stl",
+          "mesh_path": "/home/coffee/rm_sim_spear/assets/总装_urdf/meshes/CONN_TH_XT30UPB_F_CONN_TH_XT30UPB_F_2U0e_step_默认_e79a7d8bacbf2831.stl",
           "mesh_exists": true
         },
         {
@@ -13409,7 +13409,7 @@
           },
           "geometry": {
             "type": "mesh",
-            "filename": "meshes/CONN_TH_XT30UPB_F_CONN_TH_XT30UPB_F_2U0e_step_默认_05c5c86370327252.stl"
+            "filename": "meshes/CONN_TH_XT30UPB_F_CONN_TH_XT30UPB_F_2U0e_step_默认_e79a7d8bacbf2831.stl"
           },
           "material": {
             "name": null,
@@ -13420,7 +13420,7 @@
               1.0
             ]
           },
-          "mesh_path": "/home/coffee/rm_sim_spear/assets/总装_urdf/meshes/CONN_TH_XT30UPB_F_CONN_TH_XT30UPB_F_2U0e_step_默认_05c5c86370327252.stl",
+          "mesh_path": "/home/coffee/rm_sim_spear/assets/总装_urdf/meshes/CONN_TH_XT30UPB_F_CONN_TH_XT30UPB_F_2U0e_step_默认_e79a7d8bacbf2831.stl",
           "mesh_exists": true
         },
         {
@@ -13439,7 +13439,7 @@
           },
           "geometry": {
             "type": "mesh",
-            "filename": "meshes/CONN_TH_XT30UPB_F_CONN_TH_XT30UPB_F_2U0e_step_默认_05c5c86370327252.stl"
+            "filename": "meshes/CONN_TH_XT30UPB_F_CONN_TH_XT30UPB_F_2U0e_step_默认_e79a7d8bacbf2831.stl"
           },
           "material": {
             "name": null,
@@ -13450,7 +13450,7 @@
               1.0
             ]
           },
-          "mesh_path": "/home/coffee/rm_sim_spear/assets/总装_urdf/meshes/CONN_TH_XT30UPB_F_CONN_TH_XT30UPB_F_2U0e_step_默认_05c5c86370327252.stl",
+          "mesh_path": "/home/coffee/rm_sim_spear/assets/总装_urdf/meshes/CONN_TH_XT30UPB_F_CONN_TH_XT30UPB_F_2U0e_step_默认_e79a7d8bacbf2831.stl",
           "mesh_exists": true
         },
         {
@@ -13469,7 +13469,7 @@
           },
           "geometry": {
             "type": "mesh",
-            "filename": "meshes/Board_31iW_step_默认_ce189fdf03dd9acd.stl"
+            "filename": "meshes/Board_31iW_step_默认_86ca4e34ff15f883.stl"
           },
           "material": {
             "name": null,
@@ -13480,7 +13480,7 @@
               1.0
             ]
           },
-          "mesh_path": "/home/coffee/rm_sim_spear/assets/总装_urdf/meshes/Board_31iW_step_默认_ce189fdf03dd9acd.stl",
+          "mesh_path": "/home/coffee/rm_sim_spear/assets/总装_urdf/meshes/Board_31iW_step_默认_86ca4e34ff15f883.stl",
           "mesh_exists": true
         },
         {
@@ -18449,7 +18449,7 @@
           },
           "geometry": {
             "type": "mesh",
-            "filename": "meshes/CONN_TH_XT30PW_M_CONN_TH_XT30PW_M_cAaz_step_默认_e047b1256fecfaf2.stl"
+            "filename": "meshes/CONN_TH_XT30PW_M_CONN_TH_XT30PW_M_cAaz_step_默认_0fec3f1561504935.stl"
           },
           "material": {
             "name": null,
@@ -18460,7 +18460,7 @@
               1.0
             ]
           },
-          "mesh_path": "/home/coffee/rm_sim_spear/assets/总装_urdf/meshes/CONN_TH_XT30PW_M_CONN_TH_XT30PW_M_cAaz_step_默认_e047b1256fecfaf2.stl",
+          "mesh_path": "/home/coffee/rm_sim_spear/assets/总装_urdf/meshes/CONN_TH_XT30PW_M_CONN_TH_XT30PW_M_cAaz_step_默认_0fec3f1561504935.stl",
           "mesh_exists": true
         },
         {
@@ -19349,7 +19349,7 @@
           },
           "geometry": {
             "type": "mesh",
-            "filename": "meshes/CONN_TH_XT30UPB_F_CONN_TH_XT30UPB_F_2U0e_step_默认_05c5c86370327252.stl"
+            "filename": "meshes/CONN_TH_XT30UPB_F_CONN_TH_XT30UPB_F_2U0e_step_默认_e79a7d8bacbf2831.stl"
           },
           "material": {
             "name": null,
@@ -19360,7 +19360,7 @@
               1.0
             ]
           },
-          "mesh_path": "/home/coffee/rm_sim_spear/assets/总装_urdf/meshes/CONN_TH_XT30UPB_F_CONN_TH_XT30UPB_F_2U0e_step_默认_05c5c86370327252.stl",
+          "mesh_path": "/home/coffee/rm_sim_spear/assets/总装_urdf/meshes/CONN_TH_XT30UPB_F_CONN_TH_XT30UPB_F_2U0e_step_默认_e79a7d8bacbf2831.stl",
           "mesh_exists": true
         },
         {
@@ -19439,7 +19439,7 @@
           },
           "geometry": {
             "type": "mesh",
-            "filename": "meshes/CONN_TH_XT30UPB_F_CONN_TH_XT30UPB_F_2U0e_step_默认_05c5c86370327252.stl"
+            "filename": "meshes/CONN_TH_XT30UPB_F_CONN_TH_XT30UPB_F_2U0e_step_默认_e79a7d8bacbf2831.stl"
           },
           "material": {
             "name": null,
@@ -19450,7 +19450,7 @@
               1.0
             ]
           },
-          "mesh_path": "/home/coffee/rm_sim_spear/assets/总装_urdf/meshes/CONN_TH_XT30UPB_F_CONN_TH_XT30UPB_F_2U0e_step_默认_05c5c86370327252.stl",
+          "mesh_path": "/home/coffee/rm_sim_spear/assets/总装_urdf/meshes/CONN_TH_XT30UPB_F_CONN_TH_XT30UPB_F_2U0e_step_默认_e79a7d8bacbf2831.stl",
           "mesh_exists": true
         },
         {
@@ -19769,7 +19769,7 @@
           },
           "geometry": {
             "type": "mesh",
-            "filename": "meshes/CONN_TH_XT30PW_M_CONN_TH_XT30PW_M_cAaz_step_默认_e047b1256fecfaf2.stl"
+            "filename": "meshes/CONN_TH_XT30PW_M_CONN_TH_XT30PW_M_cAaz_step_默认_0fec3f1561504935.stl"
           },
           "material": {
             "name": null,
@@ -19780,7 +19780,7 @@
               1.0
             ]
           },
-          "mesh_path": "/home/coffee/rm_sim_spear/assets/总装_urdf/meshes/CONN_TH_XT30PW_M_CONN_TH_XT30PW_M_cAaz_step_默认_e047b1256fecfaf2.stl",
+          "mesh_path": "/home/coffee/rm_sim_spear/assets/总装_urdf/meshes/CONN_TH_XT30PW_M_CONN_TH_XT30PW_M_cAaz_step_默认_0fec3f1561504935.stl",
           "mesh_exists": true
         },
         {
@@ -20219,7 +20219,7 @@
           },
           "geometry": {
             "type": "mesh",
-            "filename": "meshes/CONN_TH_XT30PW_M_CONN_TH_XT30PW_M_cAaz_step_默认_e047b1256fecfaf2.stl"
+            "filename": "meshes/CONN_TH_XT30PW_M_CONN_TH_XT30PW_M_cAaz_step_默认_0fec3f1561504935.stl"
           },
           "material": {
             "name": null,
@@ -20230,7 +20230,7 @@
               1.0
             ]
           },
-          "mesh_path": "/home/coffee/rm_sim_spear/assets/总装_urdf/meshes/CONN_TH_XT30PW_M_CONN_TH_XT30PW_M_cAaz_step_默认_e047b1256fecfaf2.stl",
+          "mesh_path": "/home/coffee/rm_sim_spear/assets/总装_urdf/meshes/CONN_TH_XT30PW_M_CONN_TH_XT30PW_M_cAaz_step_默认_0fec3f1561504935.stl",
           "mesh_exists": true
         },
         {
@@ -20478,7 +20478,7 @@
         "mass_kg": 0.20550856776340928,
         "origin": {
           "xyz": [
-            0.14977155653491533,
+            0.14977155653491536,
             -0.28679973632311967,
             0.057734326574988636
           ],
@@ -20490,8 +20490,8 @@
         },
         "inertia": {
           "ixx": 0.006176741900183513,
-          "ixy": 4.666587471863393e-05,
-          "ixz": -0.0005218726734371931,
+          "ixy": 4.6665874718634095e-05,
+          "ixz": -0.000521872673437193,
           "iyy": 0.0064742562207318,
           "iyz": 0.0002739517566671273,
           "izz": 0.012068266126320263
@@ -24327,7 +24327,7 @@
           },
           "geometry": {
             "type": "mesh",
-            "filename": "meshes/M3508___________268__17_STEP_默认_fa9f1ab2c32e97e8.stl"
+            "filename": "meshes/M3508___________268__17_STEP_默认_196a7cd650a83b1e.stl"
           },
           "material": {
             "name": null,
@@ -24338,7 +24338,7 @@
               1.0
             ]
           },
-          "mesh_path": "/home/coffee/rm_sim_spear/assets/总装_urdf/meshes/M3508___________268__17_STEP_默认_fa9f1ab2c32e97e8.stl",
+          "mesh_path": "/home/coffee/rm_sim_spear/assets/总装_urdf/meshes/M3508___________268__17_STEP_默认_196a7cd650a83b1e.stl",
           "mesh_exists": true
         }
       ],
@@ -28169,7 +28169,7 @@
           },
           "geometry": {
             "type": "mesh",
-            "filename": "meshes/M3508___________268__17_STEP_默认_fa9f1ab2c32e97e8.stl"
+            "filename": "meshes/M3508___________268__17_STEP_默认_196a7cd650a83b1e.stl"
           },
           "material": {
             "name": null,
@@ -28180,7 +28180,7 @@
               1.0
             ]
           },
-          "mesh_path": "/home/coffee/rm_sim_spear/assets/总装_urdf/meshes/M3508___________268__17_STEP_默认_fa9f1ab2c32e97e8.stl",
+          "mesh_path": "/home/coffee/rm_sim_spear/assets/总装_urdf/meshes/M3508___________268__17_STEP_默认_196a7cd650a83b1e.stl",
           "mesh_exists": true
         }
       ],
@@ -28188,9 +28188,9 @@
         "mass_kg": 0.336,
         "origin": {
           "xyz": [
-            0.00027626850908753247,
-            -7.420620001980579e-05,
-            -0.021448818118689105
+            0.00027626850908753263,
+            -7.420620001980584e-05,
+            -0.02144881811868911
           ],
           "rpy": [
             0.0,
@@ -28201,9 +28201,9 @@
         "inertia": {
           "ixx": 0.00012769361811655798,
           "ixy": 7.026928973854011e-07,
-          "ixz": -6.30910862046023e-07,
+          "ixz": -6.309108620460224e-07,
           "iyy": 0.00012901225779198735,
-          "iyz": 1.8171780794243046e-07,
+          "iyz": 1.8171780794242998e-07,
           "izz": 0.00015251062090722154
         }
       }
@@ -32037,7 +32037,7 @@
           },
           "geometry": {
             "type": "mesh",
-            "filename": "meshes/M3508___________268__17_STEP_默认_fa9f1ab2c32e97e8.stl"
+            "filename": "meshes/M3508___________268__17_STEP_默认_196a7cd650a83b1e.stl"
           },
           "material": {
             "name": null,
@@ -32048,7 +32048,7 @@
               1.0
             ]
           },
-          "mesh_path": "/home/coffee/rm_sim_spear/assets/总装_urdf/meshes/M3508___________268__17_STEP_默认_fa9f1ab2c32e97e8.stl",
+          "mesh_path": "/home/coffee/rm_sim_spear/assets/总装_urdf/meshes/M3508___________268__17_STEP_默认_196a7cd650a83b1e.stl",
           "mesh_exists": true
         }
       ],
@@ -35879,7 +35879,7 @@
           },
           "geometry": {
             "type": "mesh",
-            "filename": "meshes/M3508___________268__17_STEP_默认_fa9f1ab2c32e97e8.stl"
+            "filename": "meshes/M3508___________268__17_STEP_默认_196a7cd650a83b1e.stl"
           },
           "material": {
             "name": null,
@@ -35890,7 +35890,7 @@
               1.0
             ]
           },
-          "mesh_path": "/home/coffee/rm_sim_spear/assets/总装_urdf/meshes/M3508___________268__17_STEP_默认_fa9f1ab2c32e97e8.stl",
+          "mesh_path": "/home/coffee/rm_sim_spear/assets/总装_urdf/meshes/M3508___________268__17_STEP_默认_196a7cd650a83b1e.stl",
           "mesh_exists": true
         }
       ],
@@ -35898,8 +35898,8 @@
         "mass_kg": 0.336,
         "origin": {
           "xyz": [
-            -0.00014287962896406873,
-            0.00024782304344425795,
+            -0.00014287962896406881,
+            0.0002478230434442581,
             -0.021448818118689077
           ],
           "rpy": [
@@ -35911,9 +35911,9 @@
         "inertia": {
           "ixx": 0.000129055630851658,
           "ixy": 6.593198377146777e-07,
-          "ixz": 3.176274546186199e-07,
+          "ixz": 3.1762745461861976e-07,
           "iyy": 0.00012765024505688718,
-          "iyz": -5.746152431355521e-07,
+          "iyz": -5.746152431355512e-07,
           "izz": 0.00015251062090722154
         }
       }
@@ -39747,7 +39747,7 @@
           },
           "geometry": {
             "type": "mesh",
-            "filename": "meshes/M3508___________268__17_STEP_默认_fa9f1ab2c32e97e8.stl"
+            "filename": "meshes/M3508___________268__17_STEP_默认_196a7cd650a83b1e.stl"
           },
           "material": {
             "name": null,
@@ -39758,7 +39758,7 @@
               1.0
             ]
           },
-          "mesh_path": "/home/coffee/rm_sim_spear/assets/总装_urdf/meshes/M3508___________268__17_STEP_默认_fa9f1ab2c32e97e8.stl",
+          "mesh_path": "/home/coffee/rm_sim_spear/assets/总装_urdf/meshes/M3508___________268__17_STEP_默认_196a7cd650a83b1e.stl",
           "mesh_exists": true
         }
       ],
@@ -43589,7 +43589,7 @@
           },
           "geometry": {
             "type": "mesh",
-            "filename": "meshes/M3508___________268__17_STEP_默认_fa9f1ab2c32e97e8.stl"
+            "filename": "meshes/M3508___________268__17_STEP_默认_196a7cd650a83b1e.stl"
           },
           "material": {
             "name": null,
@@ -43600,7 +43600,7 @@
               1.0
             ]
           },
-          "mesh_path": "/home/coffee/rm_sim_spear/assets/总装_urdf/meshes/M3508___________268__17_STEP_默认_fa9f1ab2c32e97e8.stl",
+          "mesh_path": "/home/coffee/rm_sim_spear/assets/总装_urdf/meshes/M3508___________268__17_STEP_默认_196a7cd650a83b1e.stl",
           "mesh_exists": true
         }
       ],
@@ -43608,8 +43608,8 @@
         "mass_kg": 0.336,
         "origin": {
           "xyz": [
-            0.00014287962896398308,
-            -0.0002478230434442924,
+            0.00014287962896398314,
+            -0.0002478230434442926,
             -0.021448818118689105
           ],
           "rpy": [
@@ -43621,9 +43621,9 @@
         "inertia": {
           "ixx": 0.000129055630851658,
           "ixy": 6.593198377146981e-07,
-          "ixz": -3.1762745461859885e-07,
+          "ixz": -3.1762745461859874e-07,
           "iyy": 0.00012765024505688723,
-          "iyz": 5.746152431355357e-07,
+          "iyz": 5.746152431355349e-07,
           "izz": 0.00015251062090722154
         }
       }
@@ -47457,7 +47457,7 @@
           },
           "geometry": {
             "type": "mesh",
-            "filename": "meshes/M3508___________268__17_STEP_默认_fa9f1ab2c32e97e8.stl"
+            "filename": "meshes/M3508___________268__17_STEP_默认_196a7cd650a83b1e.stl"
           },
           "material": {
             "name": null,
@@ -47468,7 +47468,7 @@
               1.0
             ]
           },
-          "mesh_path": "/home/coffee/rm_sim_spear/assets/总装_urdf/meshes/M3508___________268__17_STEP_默认_fa9f1ab2c32e97e8.stl",
+          "mesh_path": "/home/coffee/rm_sim_spear/assets/总装_urdf/meshes/M3508___________268__17_STEP_默认_196a7cd650a83b1e.stl",
           "mesh_exists": true
         }
       ],
@@ -51299,7 +51299,7 @@
           },
           "geometry": {
             "type": "mesh",
-            "filename": "meshes/M3508___________268__17_STEP_默认_fa9f1ab2c32e97e8.stl"
+            "filename": "meshes/M3508___________268__17_STEP_默认_196a7cd650a83b1e.stl"
           },
           "material": {
             "name": null,
@@ -51310,7 +51310,7 @@
               1.0
             ]
           },
-          "mesh_path": "/home/coffee/rm_sim_spear/assets/总装_urdf/meshes/M3508___________268__17_STEP_默认_fa9f1ab2c32e97e8.stl",
+          "mesh_path": "/home/coffee/rm_sim_spear/assets/总装_urdf/meshes/M3508___________268__17_STEP_默认_196a7cd650a83b1e.stl",
           "mesh_exists": true
         }
       ],
@@ -51318,8 +51318,8 @@
         "mass_kg": 0.336,
         "origin": {
           "xyz": [
-            -0.0002478230434442363,
-            -0.00014287962896406773,
+            -0.0002478230434442365,
+            -0.0001428796289640678,
             -0.021448818118689105
           ],
           "rpy": [
@@ -51331,9 +51331,9 @@
         "inertia": {
           "ixx": 0.0001276502450568872,
           "ixy": -6.59319837714661e-07,
-          "ixz": 5.746152431355395e-07,
+          "ixz": 5.746152431355386e-07,
           "iyy": 0.000129055630851658,
-          "iyz": 3.1762745461859827e-07,
+          "iyz": 3.176274546185981e-07,
           "izz": 0.00015251062090722154
         }
       }
@@ -57658,7 +57658,7 @@
       },
       "axis": [
         1.1102230246251568e-16,
-        -1.387778780781446e-16,
+        -2.2204460492503136e-16,
         1.0
       ],
       "limit": {
@@ -57684,8 +57684,8 @@
         ]
       },
       "axis": [
-        2.220446049250313e-16,
-        -8.326672684688674e-17,
+        2.7755575615628914e-16,
+        -1.6653345369377348e-16,
         1.0
       ],
       "limit": {
@@ -57711,7 +57711,7 @@
         ]
       },
       "axis": [
-        -8.326672684688677e-17,
+        -1.1102230246251568e-16,
         -5.551115123125784e-17,
         1.0
       ],
@@ -57928,9 +57928,6 @@
     "joint_count": 12,
     "missing_meshes": [],
     "unsupported_joint_types": [],
-    "mujoco_incompatible_meshes": [
-      "新电池_默认_ad15cf6fb7fa599c.stl",
-      "dm_j4310_2ec_默认_5f36196a63bcc568.stl"
-    ]
+    "mujoco_incompatible_meshes": []
   }
 }

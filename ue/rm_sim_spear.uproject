@@ -1,37 +1,63 @@
 {
-    "FileVersion": 3,
-    "EngineAssociation": "5.8",
-    "Category": "Robotics",
-    "Description": "UE scene and SPEAR integration project for rm_sim_spear.",
-    "Plugins": [
-        {
-            "Name": "PythonScriptPlugin",
-            "Enabled": true
-        },
-        {
-            "Name": "ModelingToolsEditorMode",
-            "Enabled": true,
-            "TargetAllowList": ["Editor"]
-        },
-        {
-            "Name": "SpCore",
-            "Enabled": true
-        },
-        {
-            "Name": "SpUnrealTypes",
-            "Enabled": true
-        },
-        {
-            "Name": "SpServices",
-            "Enabled": true
-        },
-        {
-            "Name": "RmSimSpearMetadata",
-            "Enabled": true
-        }
-    ],
-    "AdditionalPluginDirectories": [
-        "../../spear/cpp/unreal_plugins"
-    ],
-    "TargetPlatforms": ["Linux", "Windows"]
+	"FileVersion": 3,
+	"EngineAssociation": "5.8",
+	"Category": "Robotics",
+	"Description": "UE scene and SPEAR integration project for rm_sim_spear.",
+	"Modules": [
+		{
+			"Name": "rm_sim_spear",
+			"Type": "Runtime",
+			"LoadingPhase": "Default",
+			"AdditionalDependencies": [
+				"SpCore"
+			]
+		}
+	],
+	"Plugins": [
+		{
+			"Name": "PythonScriptPlugin",
+			"Enabled": true
+		},
+		{
+			"Name": "ModelingToolsEditorMode",
+			"Enabled": true,
+			"TargetAllowList": [
+				"Editor"
+			]
+		},
+		{
+			"Name": "sim",
+			"Enabled": true
+		},
+		{
+			"Name": "USDCore",
+			"Enabled": true
+		},
+		{
+			"Name": "USDImporter",
+			"Enabled": true
+		},
+		{
+			"Name": "SpCore",
+			"Enabled": true
+		},
+		{
+			"Name": "SpUnrealTypes",
+			"Enabled": true
+		},
+		{
+			"Name": "SpServices",
+			"Enabled": true
+		},
+		{
+			"Name": "RmSimSpearMetadata",
+			"Enabled": true
+		}
+	],
+	"AdditionalPluginDirectories": [
+		"../../spear/cpp/unreal_plugins"
+	],
+	"TargetPlatforms": [
+		"Linux"
+	]
 }
